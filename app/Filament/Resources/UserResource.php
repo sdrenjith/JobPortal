@@ -19,12 +19,41 @@ class UserResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
 
+
     public static function form(Form $form): Form
     {
         return $form
-            ->schema([
-                //
-            ]);
+        ->schema([
+            Forms\Components\TextInput::make('name')
+                ->required()
+                ->label('Full Name'),
+            
+            Forms\Components\TextInput::make('email')
+                ->email()
+                ->required()
+                ->label('Email'),
+            
+            Forms\Components\FileUpload::make('photo')
+                ->label('Profile Photo'),
+
+            Forms\Components\TextInput::make('phone')
+                ->label('Phone'),
+
+            Forms\Components\Select::make('gender')
+                ->label('Gender')
+                ->options([
+                    'male' => 'Male',
+                    'female' => 'Female',
+                ]),
+
+            Forms\Components\TextInput::make('expected_salary')
+                ->label('Expected Salary'),
+
+            Forms\Components\DatePicker::make('start_date')
+                ->label('Start Date'),
+
+            // Add more fields as needed
+        ]); 
     }
 
     public static function table(Table $table): Table

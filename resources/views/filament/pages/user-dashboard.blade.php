@@ -22,9 +22,7 @@
                         @endif
                     </td>
                     <td class="py-2 border-b">
-                        <x-filament::button action="edit" :record="auth()->user()" :uri="route('filament.resources.users.edit', [auth()->user(), 'relationship' => $field])" size="sm" class="text-blue-600 hover:underline">
-                            Edit
-                        </x-filament::button>
+                    <a href="{{ route('filament.resources.users.edit', auth()->user()) }}" class="text-blue-600 hover:underline"> Edit </a>
                     </td>
                 </tr>
                 @endif
@@ -34,4 +32,3 @@
     </div>
 </div>
 </x-filament-panels::page>
-

@@ -32,7 +32,10 @@ Route::middleware(['auth'])->group(function () {
         ->name('filament.admin.pages.user-dashboard');
 });
 
-Route::get('/filament/resources/users/{record}/edit', 'Filament\Resources\UsersResource@edit')->name('filament.resources.users.edit');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/filament/resources/users/{record}/edit', [App\Filament\Resources\UserResource\Pages\EditUser::class, 'mount'])->name('filament.resources.users.edit');
+});
+
 
 // Fallback route
 Route::fallback(function () {
