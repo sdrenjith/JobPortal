@@ -26,7 +26,6 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         // // Filament::panel()->default('filament.pages.dashboard');
-        // $kernel = app(\Illuminate\Contracts\Http\Kernel::class);
-        // $kernel->pushMiddleware(RoleBasedRedirect::class);    
+    
         }
 }

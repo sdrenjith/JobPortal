@@ -89,4 +89,6 @@ return [
 
     'livewire_loading_delay' => 'default',
 
+    'dashboard' => null,
+
 ];

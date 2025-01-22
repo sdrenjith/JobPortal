@@ -26,7 +26,7 @@ class LoginController extends Controller
                 case 'company':
                     return redirect()->route('filament.admin.pages.company-dashboard');
                 case 'user':
-                    return redirect()->route('filament.admin.pages.user-dashboard');
+                    return redirect()->route('account-profile.user');
                 default:
                     return redirect()->route('home');
             }
@@ -35,14 +35,5 @@ class LoginController extends Controller
         return redirect()->back()->withErrors(['Invalid email or password']);
     }
     
-//     public function authenticated(Request $request, $user)
-// {
-//     if ($user->role === 'admin') {
-//         return redirect()->route('admin.dashboard');
-//     } elseif ($user->role === 'company') {
-//         return redirect()->route('company.dashboard');
-//     } else {
-//         return redirect()->route('user.dashboard');
-//     }
-// }
+
 }
