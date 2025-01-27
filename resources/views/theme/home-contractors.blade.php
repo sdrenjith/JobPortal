@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
 
     <!-- SEO Meta Tags -->
-    <title>Finder | Contractors - Homepage</title>
+    <title>Gudnet ManPower Services - Homepage</title>
     <meta name="description" content="Finder - Directory &amp; Listings Bootstrap HTML Template">
     <meta name="keywords" content="directory, listings, search, car dealer, real estate, city guide, business listings, medical directories, event listings, e-commerce, market, multipurpose, ui kit, light and dark mode, bootstrap, html5, css3, javascript, gallery, slider, mobile, pwa">
     <meta name="author" content="Createx Studio">
@@ -49,8 +49,6 @@
     <!-- Customizer offcanvas -->
     <div class="offcanvas offcanvas-end" id="customizer" tabindex="-1">
       <div class="offcanvas-header border-bottom">
-        <h4 class="h5 offcanvas-title">Customize theme</h4>
-        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
 
@@ -156,10 +154,10 @@
         <!-- Customizer code -->
         <div class="customizer-collapse collapse" id="customizerCode">
           <div class="nav mb-3">
-            <a class="nav-link position-relative fs-base p-0" href=".html" data-bs-toggle="collapse" aria-expanded="true" aria-controls="customizerSettings customizerCode">
+            <!-- <a class="nav-link position-relative fs-base p-0" href=".html" data-bs-toggle="collapse" aria-expanded="true" aria-controls="customizerSettings customizerCode">
               <i class="fi-chevron-left fs-lg ms-n1 me-1"></i>
               <span class="hover-effect-underline stretched-link">Back to settings</span>
-            </a>
+            </a> -->
           </div>
           <p class="fs-sm pb-1">To apply the provided styles to your webpage, enclose them within a <code>&lt;style&gt;</code> tag and insert this tag into the <code>&lt;head&gt;</code> section of your HTML document after the following link to the main stylesheet:<br><code>&lt;link href="assets/css/theme.min.css"&gt;</code></p>
           <div class="position-relative bg-body-tertiary rounded overflow-hidden pt-3">
@@ -176,14 +174,8 @@
 
       <!-- Offcanvas footer (Action buttons) -->
       <div class="offcanvas-header border-top gap-3 d-none" id="customizer-btns">
-        <button type="button" class="btn btn-lg btn-secondary w-100 fs-sm" id="customizer-reset">
-          <i class="fi-trash fs-lg me-2 ms-n1"></i>
-          Reset
-        </button>
-        <button class="btn btn-lg btn-primary hiding-collapse-toggle w-100 fs-sm collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".customizer-collapse" aria-expanded="false" aria-controls="customizerSettings customizerCode">
-          <i class="fi-code fs-lg me-2 ms-n1"></i>
-          Show code
-        </button>
+        
+       
       </div>
     </div>
 
@@ -202,24 +194,29 @@
           <span class="d-none d-sm-flex flex-shrink-0 text-primary rtl-flip me-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34"><path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"></path><g fill-rule="evenodd"><path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"></path><g fill="#fff"><path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"></path><path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"></path></g></g><path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"></path><path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"></path></svg>
           </span>
-          Finder
+          Gudnet ManPower Services
         </a>
 
         <!-- Main navigation that turns into offcanvas on screens < 992px wide (lg breakpoint) -->
         <nav class="offcanvas offcanvas-start" id="navbarNav" tabindex="-1" aria-labelledby="navbarNavLabel">
           <div class="offcanvas-header py-3">
-            <h5 class="offcanvas-title" id="navbarNavLabel">Browse Finder</h5>
+            <h5 class="offcanvas-title" id="navbarNavLabel">Browse Gudnet ManPower Services</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
           <div class="offcanvas-body pt-2 pb-4 py-lg-0 mx-lg-auto">
             <ul class="navbar-nav position-relative">
-              <li class="nav-item  py-lg-2 me-lg-n1 me-xl-0">
-                <a class="nav-link active" aria-current="page" href="{{ route('home') }}" role="button"  data-bs-trigger="hover" aria-expanded="false">Home</a>
-   
+              
+              <li class="nav-item py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link" href="{{ route('home') }}" role="button" data-bs-trigger="hover" aria-expanded="false">Jobs</a>
               </li>
-             
-              <li class="nav-item  py-lg-2 me-lg-n1 me-xl-0">
-                <a class="nav-link " href="{{ route('account-profile.user') }}" role="button"  data-bs-trigger="hover" data-bs-auto-close="outside" aria-expanded="false">My Profile</a>
+              <li class="nav-item py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link" href="{{ route('home') }}" role="button" data-bs-trigger="hover" aria-expanded="false">Candidates</a>
+              </li>
+              <li class="nav-item py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link" href="{{ route('home') }}" role="button" data-bs-trigger="hover" aria-expanded="false">Agency Services</a>
+              </li>
+              <li class="nav-item py-lg-2 me-lg-n1 me-xl-0">
+                <a class="nav-link" href="{{ route('home') }}" role="button" data-bs-trigger="hover" aria-expanded="false">News & More</a>
               </li>
              
             </ul>
@@ -229,54 +226,17 @@
         <!-- Button group -->
         <div class="d-flex gap-sm-1">
 
-          <!-- Theme switcher (light/dark/auto) -->
-          <div class="dropdown">
-            <button type="button" class="theme-switcher btn btn-icon btn-outline-secondary fs-lg border-0 animate-scale" data-bs-toggle="dropdown" data-bs-display="dynamic" aria-expanded="false" aria-label="Toggle theme (light)">
-              <span class="theme-icon-active d-flex animate-target">
-                <i class="fi-sun"></i>
-              </span>
-            </button>
-            <ul class="dropdown-menu start-50 translate-middle-x" style="--fn-dropdown-min-width: 9rem; --fn-dropdown-spacer: .5rem">
-              <li>
-                <button type="button" class="dropdown-item active" data-bs-theme-value="light" aria-pressed="true">
-                  <span class="theme-icon d-flex fs-base me-2">
-                    <i class="fi-sun"></i>
-                  </span>
-                  <span class="theme-label">Light</span>
-                  <i class="item-active-indicator fi-check ms-auto"></i>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item" data-bs-theme-value="dark" aria-pressed="false">
-                  <span class="theme-icon d-flex fs-base me-2">
-                    <i class="fi-moon"></i>
-                  </span>
-                  <span class="theme-label">Dark</span>
-                  <i class="item-active-indicator fi-check ms-auto"></i>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item" data-bs-theme-value="auto" aria-pressed="false">
-                  <span class="theme-icon d-flex fs-base me-2">
-                    <i class="fi-auto"></i>
-                  </span>
-                  <span class="theme-label">Auto</span>
-                  <i class="item-active-indicator fi-check ms-auto"></i>
-                </button>
-              </li>
-            </ul>
-          </div>
-
+       
           <!-- Account button -->
-          <a class="btn btn-icon btn-outline-secondary fs-lg border-0 animate-shake me-2" href="account-signin" aria-label="Sign in to account">
-            <i class="fi-user animate-target"></i>
-          </a>
-
-          <!-- Join button  -->
-          <a class="btn btn-primary animate-scale" href="add-contractor-location.html">
-            <i class="fi-plus fs-lg animate-target ms-n2 me-1 me-sm-2"></i>
-            Join<span class="d-none d-xl-inline ms-1">Pro Network</span>
-          </a>
+          
+          @auth
+              <a class="btn btn-primary" href="{{ route('account-profile.user') }}" role="button" data-bs-trigger="hover" data-bs-auto-close="outside" aria-expanded="false">
+                <i class="fi-user me-2"></i> My Profile
+              </a>
+          @else
+              <a class="btn btn-outline-secondary me-2" href="{{ route('login') }}">Sign In</a>
+              <a class="btn btn-primary" href="{{ route('register.form') }}">Register</a>
+          @endauth
         </div>
       </div>
     </header>
@@ -626,7 +586,7 @@
               <span class="flex-shrink-0 text-primary rtl-flip me-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34"><path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"></path><g fill-rule="evenodd"><path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"></path><g fill="#fff"><path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"></path><path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"></path></g></g><path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"></path><path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"></path></svg>
               </span>
-              <span class="fs-4 fw-semibold">Finder</span>
+              <span class="fs-4 fw-semibold">Gudnet ManPower Services</span>
             </a>
             <p class="fs-sm text-body-secondary pt-md-1" style="max-width: 260px">Connecting you with reliable local contractors for all your service needs.</p>
             <div class="d-flex gap-3 pt-2 pt-md-3">
@@ -717,7 +677,7 @@
                     <a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="#!">Press &amp; announcements</a>
                   </li>
                   <li class="pt-1">
-                    <a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="#!">Careers at Finder</a>
+                    <a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="#!">Careers at Gudnet ManPower Services</a>
                   </li>
                   <li class="pt-1">
                     <a class="nav-link hover-effect-underline d-inline text-body fw-normal p-0" href="#!">Contact us</a>
@@ -810,8 +770,7 @@
           <rect x=".75" y=".75" width="60.5" height="30.5" rx="15.25" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></rect>
         </svg>
       </a>
-      <a class="btn btn-sm btn-outline-secondary text-uppercase bg-body rounded-pill shadow animate-rotate ms-2 me-n5" href="#customizer" style="font-size: .625rem; letter-spacing: .05rem;" data-bs-toggle="offcanvas" role="button" aria-controls="customizer">
-        Customize<i class="fi-settings fs-base ms-1 me-n2 animate-target"></i>
+ 
       </a>
     </div>
 

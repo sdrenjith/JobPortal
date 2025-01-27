@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="en" data-bs-theme="light" data-pwa="true">
-<!-- Mirrored from finder-html.createx.studio/{{ route('account-profile.user') }} by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Jan 2025 11:31:13 GMT -->
+<!-- Mirrored from gudnetmanpowerservices-html.createx.studio/{{ route('account-profile.user') }} by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Jan 2025 11:31:13 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 <head>
     <meta charset="utf-8">
@@ -8,10 +8,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
 
     <!-- SEO Meta Tags -->
-    <title>Finder | Account - My Profile</title>
-    <meta name="description" content="Finder - Directory &amp; Listings Bootstrap HTML Template">
+    <title>gudnetmanpowerservices | Account - My Profile</title>
+    <meta name="description" content="gudnetmanpowerservices - Directory &amp; Listings Bootstrap HTML Template">
     <meta name="keywords" content="directory, listings, search, car dealer, real estate, city guide, business listings, medical directories, event listings, e-commerce, market, multipurpose, ui kit, light and dark mode, bootstrap, html5, css3, javascript, gallery, slider, mobile, pwa">
     <meta name="author" content="Createx Studio">
+
+    <style>
+      .navbar{
+        z-index:3000 !important;
+      }
+      </style>
 
     <!-- Webmanifest + Favicon / App icons -->
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
@@ -26,8 +32,8 @@
     <link rel="preload" href="assets/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin="">
 
     <!-- Font icons -->
-    <link rel="preload" href="assets/icons/finder-icons.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="stylesheet" href="assets/icons/finder-icons.min.css">
+    <link rel="preload" href="assets/icons/gudnetmanpowerservices-icons.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="stylesheet" href="assets/icons/gudnetmanpowerservices-icons.min.css">
 
     <!-- Vendor styles -->
     <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
@@ -45,150 +51,10 @@
   <!-- Body -->
   <body>
 
-    <!-- Customizer offcanvas -->
-    <div class="offcanvas offcanvas-end" id="customizer" tabindex="-1">
-      <div class="offcanvas-header border-bottom">
-        <h4 class="h5 offcanvas-title">Customize theme</h4>
-        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-
-        <!-- Customizer settings -->
-        <div class="customizer-collapse collapse show" id="customizerSettings">
-
-          <!-- Colors -->
-          <div class="pb-4 mb-2">
-            <div class="d-flex align-items-center mb-3">
-              <i class="fi-swatches text-body-tertiary fs-5 me-2"></i>
-              <h5 class="fs-lg mb-0">Colors</h5>
-            </div>
-            <div class="row row-cols-2 g-3" id="theme-colors">
-              <div class="col">
-                <h6 class="fs-sm mb-2">Primary</h6>
-                <div class="color-swatch d-flex border rounded gap-3 p-2" id="theme-primary" data-color-labels="[&quot;theme-primary&quot;, &quot;primary&quot;, &quot;primary-rgb&quot;]">
-                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#d85151">
-                  <label for="primary" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #d85151"></label>
-                  <input type="color" class="visually-hidden" id="primary" value="#d85151">
-                </div>
-              </div>
-              <div class="col">
-                <h6 class="fs-sm mb-2">Success</h6>
-                <div class="color-swatch d-flex border rounded gap-3 p-2" id="theme-success" data-color-labels="[&quot;theme-success&quot;, &quot;success&quot;, &quot;success-rgb&quot;]">
-                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#33b36b">
-                  <label for="success" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #33b36b"></label>
-                  <input type="color" class="visually-hidden" id="success" value="#33b36b">
-                </div>
-              </div>
-              <div class="col">
-                <h6 class="fs-sm mb-2">Warning</h6>
-                <div class="color-swatch d-flex border rounded gap-3 p-2" id="theme-warning" data-color-labels="[&quot;theme-warning&quot;, &quot;warning&quot;, &quot;warning-rgb&quot;]">
-                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#fc9231">
-                  <label for="warning" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #fc9231"></label>
-                  <input type="color" class="visually-hidden" id="warning" value="#fc9231">
-                </div>
-              </div>
-              <div class="col">
-                <h6 class="fs-sm mb-2">Danger</h6>
-                <div class="color-swatch d-flex border rounded gap-2 p-2" id="theme-danger" data-color-labels="[&quot;theme-danger&quot;, &quot;danger&quot;, &quot;danger-rgb&quot;]">
-                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#f03d3d">
-                  <label for="danger" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #f03d3d"></label>
-                  <input type="color" class="visually-hidden" id="danger" value="#f03d3d">
-                </div>
-              </div>
-              <div class="col">
-                <h6 class="fs-sm mb-2">Info</h6>
-                <div class="color-swatch d-flex border rounded gap-2 p-2" id="theme-info" data-color-labels="[&quot;theme-info&quot;, &quot;info&quot;, &quot;info-rgb&quot;]">
-                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#3d7a81">
-                  <label for="info" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #3d7a81"></label>
-                  <input type="color" class="visually-hidden" id="info" value="#3d7a81">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Direction -->
-          <div class="pb-4 mb-2">
-            <div class="d-flex align-items-center pb-1 mb-2">
-              <i class="fi-sort text-body-tertiary fs-lg me-2" style="transform: rotate(90deg)"></i>
-              <h5 class="fs-lg mb-0">Direction</h5>
-            </div>
-            <div class="d-flex align-items-center justify-content-between border rounded p-3">
-              <div class="me-3">
-                <h6 class="mb-1">RTL</h6>
-                <p class="fs-sm mb-0">Change text direction</p>
-              </div>
-              <div class="form-check form-switch m-0">
-                <input type="checkbox" class="form-check-input" role="switch" id="rtl-switch">
-              </div>
-            </div>
-            <div class="alert alert-info p-2 mt-2 mb-0">
-              <div class="d-flex text-body-emphasis fs-xs py-1 pe-1">
-                <i class="fi-info text-info fs-lg mb-2 mb-sm-0" style="margin-top: .125rem"></i>
-                <div class="ps-2">To switch the text direction of your webpage from LTR to RTL, please consult the detailed instructions provided in the relevant section of our documentation.</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Border width -->
-          <div class="pb-4 mb-2">
-            <div class="d-flex align-items-center pb-1 mb-2">
-              <i class="fi-menu text-body-tertiary fs-lg me-2"></i>
-              <h5 class="fs-lg mb-0">Border width, px</h5>
-            </div>
-            <div class="slider-input d-flex align-items-center gap-3 border rounded p-3" id="border-input">
-              <input type="range" class="form-range" min="0" max="10" step="1" value="1">
-              <input type="number" class="form-control" id="border-width" min="0" max="10" value="1" style="max-width: 5.5rem">
-            </div>
-          </div>
-
-          <!-- Rounding -->
-          <div class="d-flex align-items-center pb-1 mb-2">
-            <i class="fi-maximize text-body-tertiary fs-lg me-2"></i>
-            <h5 class="fs-lg mb-0">Rounding, rem</h5>
-          </div>
-          <div class="slider-input d-flex align-items-center gap-3 border rounded p-3">
-            <input type="range" class="form-range" min="0" max="5" step=".05" value="0.5">
-            <input type="number" class="form-control" id="border-radius" min="0" max="5" step=".05" value="0.5" style="max-width: 5.5rem">
-          </div>
-        </div>
-
-        <!-- Customizer code -->
-        <div class="customizer-collapse collapse" id="customizerCode">
-          <div class="nav mb-3">
-            <a class="nav-link position-relative fs-base p-0" href=".html" data-bs-toggle="collapse" aria-expanded="true" aria-controls="customizerSettings customizerCode">
-              <i class="fi-chevron-left fs-lg ms-n1 me-1"></i>
-              <span class="hover-effect-underline stretched-link">Back to settings</span>
-            </a>
-          </div>
-          <p class="fs-sm pb-1">To apply the provided styles to your webpage, enclose them within a <code>&lt;style&gt;</code> tag and insert this tag into the <code>&lt;head&gt;</code> section of your HTML document after the following link to the main stylesheet:<br><code>&lt;link href="assets/css/theme.min.css"&gt;</code></p>
-          <div class="position-relative bg-body-tertiary rounded overflow-hidden pt-3">
-            <div class="position-absolute top-0 start-0 w-100 p-3">
-              <button type="button" class="btn btn-sm btn-outline-dark w-100" data-copy-text-from="#generated-styles" data-done-label="Code copied">
-                <i class="fi-copy fs-sm me-1"></i>
-                Copy code
-              </button>
-            </div>
-            <pre class="text-wrap bg-transparent border-0 fs-xs text-body-emphasis p-4 pt-5" id="generated-styles"></pre>
-          </div>
-        </div>
-      </div>
-
-      <!-- Offcanvas footer (Action buttons) -->
-      <div class="offcanvas-header border-top gap-3 d-none" id="customizer-btns">
-        <button type="button" class="btn btn-lg btn-secondary w-100 fs-sm" id="customizer-reset">
-          <i class="fi-trash fs-lg me-2 ms-n1"></i>
-          Reset
-        </button>
-        <button class="btn btn-lg btn-primary hiding-collapse-toggle w-100 fs-sm collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".customizer-collapse" aria-expanded="false" aria-controls="customizerSettings customizerCode">
-          <i class="fi-code fs-lg me-2 ms-n1"></i>
-          Show code
-        </button>
-      </div>
-    </div>
-
+   
 
     <!-- Navigation bar (Page header) -->
-    <header class="navbar navbar-expand-lg bg-body navbar-sticky sticky-top z-fixed px-0" data-sticky-element="">
+    <header class="navbar navbar-expand-lg bg-body navbar-sticky sticky-top z-3000 px-0" data-sticky-element="">
       <div class="container">
 
         <!-- Mobile offcanvas menu toggler (Hamburger) -->
@@ -198,16 +64,16 @@
 
         <!-- Navbar brand (Logo) -->
         <a class="navbar-brand py-1 py-md-2 py-xl-1 me-2 me-sm-n4 me-md-n5 me-lg-0" href="home-real-estate.html">
-          <span class="d-none d-sm-flex flex-shrink-0 text-primary rtl-flip me-2">
+          <span class="d-none d-sm-flex flex-shrink-0 text rtl-flip me-2">
             <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34"><path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"></path><g fill-rule="evenodd"><path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"></path><g fill="#fff"><path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"></path><path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"></path></g></g><path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"></path><path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"></path></svg>
           </span>
-          Finder
+          Gudnet ManPower Services
         </a>
 
  <!-- Main navigation -->
 <nav class="offcanvas offcanvas-start" id="navbarNav" tabindex="-1" aria-labelledby="navbarNavLabel">
   <div class="offcanvas-header py-3">
-    <h5 class="offcanvas-title" id="navbarNavLabel">Browse Finder</h5>
+    <h5 class="offcanvas-title" id="navbarNavLabel">Browse gudnetmanpowerservices</h5>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body pt-2 pb-4 py-lg-0 mx-lg-auto">
@@ -218,7 +84,7 @@
       </li>
       <!-- Account menu remains unchanged -->
       <li class="nav-item  py-lg-2 me-lg-n1 me-xl-0">
-      <a class="nav-link active " href="{{ route ('account-settings.user') }}" role="button"  data-bs-trigger="hover" aria-expanded="false">Account Settings</a>
+      <a class="nav-link active " href="{{ route ('user.edit') }}" role="button"  data-bs-trigger="hover" aria-expanded="false">Edit Profile</a>
 
       </li>
     </ul>
@@ -229,48 +95,16 @@
         <!-- Button group -->
         <div class="d-flex gap-sm-1">
 
-          <!-- Theme switcher (light/dark/auto) -->
-          <div class="dropdown">
-            <button type="button" class="theme-switcher btn btn-icon btn-outline-secondary fs-lg border-0 animate-scale" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Toggle theme (light)">
-              <span class="theme-icon-active d-flex animate-target">
-                <i class="fi-sun"></i>
-              </span>
-            </button>
-            <ul class="dropdown-menu start-50 translate-middle-x" style="--fn-dropdown-min-width: 9rem; --fn-dropdown-spacer: .5rem">
-              <li>
-                <button type="button" class="dropdown-item active" data-bs-theme-value="light" aria-pressed="true">
-                  <span class="theme-icon d-flex fs-base me-2">
-                    <i class="fi-sun"></i>
-                  </span>
-                  <span class="theme-label">Light</span>
-                  <i class="item-active-indicator fi-check ms-auto"></i>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item" data-bs-theme-value="dark" aria-pressed="false">
-                  <span class="theme-icon d-flex fs-base me-2">
-                    <i class="fi-moon"></i>
-                  </span>
-                  <span class="theme-label">Dark</span>
-                  <i class="item-active-indicator fi-check ms-auto"></i>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item" data-bs-theme-value="auto" aria-pressed="false">
-                  <span class="theme-icon d-flex fs-base me-2">
-                    <i class="fi-auto"></i>
-                  </span>
-                  <span class="theme-label">Auto</span>
-                  <i class="item-active-indicator fi-check ms-auto"></i>
-                </button>
-              </li>
-            </ul>
-          </div>
+
 
           <!-- Account dropdown (Logged in state) -->
           <div class="dropdown pe-1 me-2">
             <a class="btn btn-icon hover-effect-scale position-relative bg-body-secondary border rounded-circle overflow-hidden" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="My account">
-              <img src="assets/img/account/avatar-sm.jpg" class="hover-effect-target position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="Avatar">
+              @if (auth()->user()->photo)
+                <img src="{{ Storage::url(auth()->user()->photo) }}" class="hover-effect-target position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="Avatar">
+              @else
+                <img src="assets/img/account/avatar-sm.jpg" class="hover-effect-target position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="Avatar">
+              @endif
             </a>
             <ul class="dropdown-menu dropdown-menu-end" style="--fn-dropdown-spacer: .5rem">
               <li><span class="h6 dropdown-header">{{ auth()->user()->name }}</span></li>
@@ -284,8 +118,7 @@
               <li>
                 <a class="dropdown-item" href="account-settings.html">
                   <i class="fi-settings opacity-75 me-2"></i>
-                  Account settings
-                </a>
+Edit profile                </a>
               </li>
               <li><hr class="dropdown-divider"></li>
               <li>
@@ -312,21 +145,10 @@
           <!-- Sidebar navigation that turns into offcanvas on screens < 992px wide (lg breakpoint) -->
           <aside class="col-lg-3" style="margin-top: -105px">
             <div class="offcanvas-lg offcanvas-start sticky-lg-top pe-lg-3 pe-xl-4" id="accountSidebar">
-              <div class="d-none d-lg-block" style="height: 105px"></div>
+              <div class="d-none d-lg-block" style="height: 91px"></div>
 
               <!-- Header -->
-              <div class="offcanvas-header d-lg-block py-3 p-lg-0">
-                <div class="d-flex flex-row flex-lg-column align-items-center align-items-lg-start">
-                  <div class="flex-shrink-0 bg-body-secondary border rounded-circle overflow-hidden" style="width: 64px; height: 64px">
-                    <img src="assets/img/account/avatar.jpg" alt="Avatar">
-                  </div>
-                  <div class="pt-lg-3 ps-3 ps-lg-0">
-                    <h6 class="mb-1">{{ auth()->user()->name }}</h6>
-                    <p class="fs-sm mb-0">{{ auth()->user()->email }}</p>
-                  </div>
-                </div>
-                <button type="button" class="btn-close d-lg-none" data-bs-dismiss="offcanvas" data-bs-target="#accountSidebar" aria-label="Close"></button>
-              </div>
+         
 
               <!-- Body (Navigation) -->
               <div class="offcanvas-body d-block pt-2 pt-lg-4 pb-lg-0">
@@ -336,10 +158,9 @@
                     My profile
                   </a>
                  
-                  <a class="list-group-item list-group-item-action d-flex align-items-center" href="{{ route('account-settings.user') }}">
+                  <a class="list-group-item list-group-item-action d-flex align-items-center" href="{{ route('user.edit') }}">
                     <i class="fi-settings fs-base opacity-75 me-2"></i>
-                    Account settings
-                  </a>
+Edit profile                  </a>
                  
              
                   <a class="list-group-item list-group-item-action d-flex align-items-center" href="{{ route('logout') }}">
@@ -358,125 +179,67 @@
 
             <!-- Wallet + Account progress -->
             <section class="row g-3 g-xl-4 pb-5 mb-md-3">
-              <div class="col-md-6 col-lg-5 col-xl-6">
-                <div class="card bg-success-subtle border-0 h-100">
-                  <div class="card-body">
-                    <h3 class="fs-sm fw-normal mb-2">Personal wallet</h3>
-                    <div class="h5 mb-0">$0.00</div>
-                  </div>
-                  <div class="card-footer bg-transparent border-0 pt-0 pb-4 mt-n2 mt-sm-0">
-                    <a class="position-relative d-inline-flex align-items-center fs-sm fw-medium text-success text-decoration-none" href="#!">
-                      <span class="hover-effect-underline stretched-link">Top up the wallet</span>
-                      <i class="fi-chevron-right fs-base ms-1"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-6 col-lg-7 col-xl-6">
-                <div class="card bg-warning-subtle border-0 h-100">
-                  <div class="card-body d-flex align-items-center">
-                    <div class="circular-progress text-warning flex-shrink-0 ms-n2 ms-sm-0" role="progressbar" style="--fn-progress: 65" aria-label="Warning progress" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
-                      <svg class="progress-circle">
-                        <circle class="progress-background d-none-dark" r="0" style="stroke: #fff"></circle>
-                        <circle class="progress-background d-none d-block-dark" r="0" style="stroke: rgba(255,255,255, .1)"></circle>
-                        <circle class="progress-bar" r="0"></circle>
-                      </svg>
-                      <h5 class="position-absolute top-50 start-50 translate-middle text-center mb-0">65%</h5>
-                    </div>
-                    <div class="ps-3 ps-sm-4">
-                      <h3 class="h6 pb-1 mb-2">Complete your profile</h3>
-                      <ul class="list-unstyled fs-sm mb-0">
-                        <li class="d-flex">
-                          <i class="fi-plus fs-base me-2" style="margin-top: .1875rem"></i>
-                          Add the languages you speak
-                        </li>
-                        <li class="d-flex">
-                          <i class="fi-plus fs-base me-2" style="margin-top: .1875rem"></i>
-                          Verify your email
-                        </li>
-                        <li class="d-flex">
-                          <i class="fi-plus fs-base me-2" style="margin-top: .1875rem"></i>
-                          Add date of birth
-                        </li>
-                      </ul>
-                    </div>
-
-
-<!-- Include the Modal -->
-<div class="modal fade" id="dynamicFormModal" tabindex="-1" aria-labelledby="dynamicFormModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="dynamicFormModalLabel">Fill Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="col-12" >
+    <div class="card bg-warning-subtle border-0 h-100">
+        <div class="card-body d-flex align-items-center justify-content-between">
+            <div>
+                <h3 class="h6 pb-1 mb-2">Complete your profile</h3>
+                <p class="mb-0">Click here to complete the rest of your details.</p>
             </div>
-            <div class="modal-body">
-                <form id="dynamicForm">
-                    <!-- Form content will be loaded dynamically via AJAX -->
-                </form>
-            </div>
+            <a href="#" id="complete-profile" class="btn btn-warning">Complete Profile</a>
         </div>
     </div>
 </div>
-
-<div class="modal fade" id="dynamicFormModal" tabindex="-1" aria-labelledby="dynamicFormModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="dynamicFormModalLabel">Fill Details</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <form id="dynamicForm">
-                    <!-- Form content will be loaded dynamically via AJAX -->
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
-                  </div>
-                </div>
-              </div>
+             
             </section>
 
-            <script>
-    $(document).ready(function () {
-        $('.open-form').click(function (e) {
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function() {
+        // Step 2: Handle the "Complete Profile" button click
+        $('#complete-profile').click(function(e) {
+          $('.table, .hdhide').hide();
+          if ($('.table').is(':hidden')) {
+            $('a[href="{{ route('account-profile.user') }}"]').removeClass('active');
+        }
             e.preventDefault();
-            const action = $(this).data('action');
-
-            // Fetch form content via AJAX
             $.ajax({
-                url: `/form-content/${action}`, // Laravel route to fetch the form
-                method: 'GET',
-                success: function (response) {
-                    $('#dynamicForm').html(response);
-                    $('#dynamicFormModal').modal('show');
-                },
-                error: function () {
-                    alert('Failed to load form content.');
+                url: '{{ route("profile.complete") }}',
+                type: 'GET',
+                success: function(response) {
+                    $('body').append(`
+                        <div id="profile-modal" style="position: absolute; top: 14%; left: 33%; width: 51%; height: auto;min-height: 99%; background: #F0F0F0; z-index: 2000; padding: 20px; overflow-y: auto;">
+                        <button id="close-modal" style="position: absolute; top: 10px; right: 10px;">Close</button>
+                            ${response}
+                        </div>
+                    `);
                 }
             });
         });
 
-        // Handle form submission
-        $('#dynamicForm').submit(function (e) {
+        // Step 7: Handle the form submission
+        $(document).on('submit', '#profile-form', function(e) {
             e.preventDefault();
-            const formData = $(this).serialize();
-
             $.ajax({
-                url: '/submit-form',
-                method: 'POST',
-                data: formData,
-                success: function () {
-                    alert('Form submitted successfully!');
-                    $('#dynamicFormModal').modal('hide');
+                url: $(this).attr('action'),
+                type: 'POST',
+                data: $(this).serialize(),
+                success: function(response) {
+                    alert(response.success);
+                    $('#profile-modal').remove();
+                    $('.table , .hdhide').show(); // Show the profile info section
+
                 },
-                error: function () {
-                    alert('Failed to submit the form.');
-                }
+                error: function(response) {
+                    alert(response.responseJSON.errors);
+                } 
             });
+        });
+
+        // Close the modal when the "Close" button is clicked
+        $(document).on('click', '#close-modal', function() {
+            $('#profile-modal').remove();
+            $('a[href="{{ route('account-profile.user') }}"]').addClass('active');
         });
     });
 </script>
@@ -484,7 +247,11 @@
             <!-- User info -->
             <section class="pb-5 mb-md-3">
               <div class="ratio ratio-1x1 bg-body-tertiary border rounded-circle overflow-hidden mb-3 mb-md-4" style="width: 124px">
-                <img src="assets/img/account/avatar-lg.jpg" alt="Avatar">
+              @if(auth()->user()->photo)
+                        <img src="{{ Storage::url(auth()->user()->photo) }}" alt="Profile Photo" class="rounded-circle" width="50">
+                      @else
+                      <img src="assets/img/account/avatar-lg.jpg" alt="Avatar">
+                      @endif
               </div>
               <h2 class="h5 pb-1 pb-sm-0 mb-2 mb-sm-3">{{ auth()->user()->name }}</h2>
               <ul class="list-unstyled flex-row flex-wrap gap-sm-3 fs-sm mb-3">
@@ -502,8 +269,8 @@
                                 </li>
               </ul>
               <p class="fs-sm pb-sm-1 pb-md-0 mb-md-4">{{ auth()->user()->resume_description }}</p>
-              <a class="btn btn-md btn-primary" href="{{ route('filament.resources.users.edit', auth()->user()) }} ">Edit profile</a>
-            </section>
+              <a class="btn btn-md btn-primary" href="{{ route('user.edit', auth()->user()) }}">Edit profile</a>
+                        </section>
 
 
 
@@ -517,14 +284,11 @@
       <div class="col-lg-12">
         <div class="mt-4">
           <div class="row">
-            <div class="col">
+            <div class="col hdhide">
               <h2> Profile Information</h2>
             </div>
-            <div class="col-auto">
-              <a class="btn btn-md btn-primary" href="{{ route('filament.resources.users.edit', auth()->user()) }} ">Edit </a>
-            </div>
-          </div>
 
+          </div>
           <div class="p-4 bg-white shadow rounded-lg">
             <table class="table">
               <tbody>
@@ -540,15 +304,13 @@
                         No photo uploaded
                       @endif
                     @else
-                      {{ auth()->user()->$field ?? 'N/A' }}
+                      {{ is_array(auth()->user()->$field) ? implode(', ', auth()->user()->$field) : htmlspecialchars((string) (auth()->user()->$field ?? 'N/A')) }}
                     @endif
                   </td>
-                  <td>
-                    <!-- <a href="{{ route('filament.resources.users.edit', auth()->user()) }}" class="btn btn-sm btn-primary">Edit</a> -->
-                  </td>
+                 
                 </tr>
                 @endif
-                @endforeach
+                @endForeach
               </tbody>
             </table>
           </div>
@@ -567,7 +329,7 @@
                   <div class="position-relative">
                     <i class="fi-globe fs-4 text-dark-emphasis pb-1 pb-md-0 mb-2 mb-md-3"></i>
                     <h3 class="h6 pb-md-1 mb-2">
-                      <a class="hover-effect-underline stretched-link" href="#!">Join a Finder property club</a>
+                      <a class="hover-effect-underline stretched-link" href="#!">Join a gudnetmanpowerservices property club</a>
                     </h3>
                     <p class="fs-sm mb-0">Join your local Host Club to connect with your hosting community both online and through in-person or virtual meetups.</p>
                   </div>
@@ -600,7 +362,7 @@
               <span class="flex-shrink-0 text-primary rtl-flip me-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34"><path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"></path><g fill-rule="evenodd"><path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"></path><g fill="#fff"><path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"></path><path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"></path></g></g><path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"></path><path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"></path></svg>
               </span>
-              <span class="fs-4 fw-semibold">Finder</span>
+              <span class="fs-4 fw-semibold">gudnetmanpowerservices</span>
             </a>
             <ul class="list-unstyled gap-3">
               <li>
@@ -696,8 +458,8 @@
         <div class="position-relative d-flex flex-column flex-md-row align-items-center overflow-hidden mb-md-2">
           <div class="position-relative d-xl-flex align-items-center w-100 z-2 text-center text-md-start py-4 py-md-5 px-4 px-sm-5 ps-md-5 pe-md-0 pe-lg-5 pe-xl-0 mt-md-4 ms-xxl-3 me-lg-5 me-xl-0">
             <div class="pt-3 pt-md-0 pt-xl-2 pe-xl-2 pe-xxl-0 me-xl-4 me-xxl-5">
-              <h3 class="mb-2">Download Finder App</h3>
-              <p class="text-body-secondary mb-xl-0">Find everything you need for buying, selling and renting property in our new Finder App!</p>
+              <h3 class="mb-2">Download gudnetmanpowerservices App</h3>
+              <p class="text-body-secondary mb-xl-0">Find everything you need for buying, selling and renting property in our new gudnetmanpowerservices App!</p>
             </div>
             <div class="d-flex flex-shrink-0 justify-content-center justify-content-md-start gap-3 pt-xl-3 pe-xl-3 me-xxl-5">
               <a class="btn btn-market btn-lg" href="#!" aria-label="Download on App Store">
@@ -711,7 +473,7 @@
             </div>
           </div>
           <div class="ratio rtl-flip position-relative z-2 align-self-md-end me-md-n4 me-lg-n5 me-xxl-0" style="--fn-aspect-ratio: calc(233 / 466 * 100%); max-width: 466px">
-            <img src="assets/img/app-footer.png" alt="Finder app">
+            <img src="assets/img/app-footer.png" alt="gudnetmanpowerservices app">
           </div>
           <div class="bg-body-tertiary position-absolute bottom-0 start-0 w-100 rounded-4 d-none d-md-block" style="height: calc(100% - 32px)"></div>
           <div class="bg-body-tertiary position-absolute bottom-0 start-0 w-100 h-100 rounded-4 d-md-none"></div>
@@ -719,7 +481,6 @@
 
         <!-- Copyright -->
         <div class="text-center pt-4 pb-md-2">
-          <p class="text-body-secondary fs-sm mb-0">© All rights reserved. Made by <a class="text-body fw-medium text-decoration-none hover-effect-underline" href="https://createx.studio/" target="_blank" rel="noreferrer">Createx Studio</a></p>
         </div>
       </div>
 
@@ -745,8 +506,7 @@
           <rect x=".75" y=".75" width="60.5" height="30.5" rx="15.25" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></rect>
         </svg>
       </a>
-      <a class="btn btn-sm btn-outline-secondary text-uppercase bg-body rounded-pill shadow animate-rotate ms-2 me-n5" href="#customizer" style="font-size: .625rem; letter-spacing: .05rem;" data-bs-toggle="offcanvas" role="button" aria-controls="customizer">
-        Customize<i class="fi-settings fs-base ms-1 me-n2 animate-target"></i>
+ 
       </a>
     </div>
 
@@ -759,5 +519,5 @@
   
 
 </body>
-<!-- Mirrored from finder-html.createx.studio/{{ route('account-profile.user') }} by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Jan 2025 11:31:14 GMT -->
+<!-- Mirrored from gudnetmanpowerservices-html.createx.studio/{{ route('account-profile.user') }} by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Jan 2025 11:31:14 GMT -->
 </html>

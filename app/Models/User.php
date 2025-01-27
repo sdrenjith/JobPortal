@@ -7,16 +7,17 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable
-{
-    use HasFactory, Notifiable, HasRoles;
+    class User extends Authenticatable
+    {
+        use HasFactory, Notifiable, HasRoles;
 
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'role',
-        'photo',
+        protected $fillable = [
+            'first_name',
+            'last_name',
+            'email',
+            'password',
+            'role',
+            'photo',
         'age',
         'gender',
         'marital_status',
@@ -72,5 +73,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
         'start_date' => 'date',
+        'language' => 'array',
+        'main_skill' => 'array',
+        'cooking_skills' => 'array',
+        'other_skills' => 'array',
+        'personality' => 'array',
+        'duration_of_education' => 'array',
+        'day_off_preference' => 'array',
+        'accommodation_preference' => 'array',
+        'previous_job_position' => 'array',
+        'previous_worked_country' => 'array',
+        'job_in_employers_house' => 'array',
     ];
 }

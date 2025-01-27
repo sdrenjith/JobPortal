@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
 
     <!-- SEO Meta Tags -->
-    <title>Finder | Account - Sign In</title>
+    <title>Gudnet ManPower Services | Account - Sign In</title>
     <meta name="description" content="Finder - Directory &amp; Listings Bootstrap HTML Template">
     <meta name="keywords" content="directory, listings, search, car dealer, real estate, city guide, business listings, medical directories, event listings, e-commerce, market, multipurpose, ui kit, light and dark mode, bootstrap, html5, css3, javascript, gallery, slider, mobile, pwa">
     <meta name="author" content="Createx Studio">
@@ -197,7 +197,7 @@
               <span class="d-flex flex-shrink-0 text-primary rtl-flip me-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34"><path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"></path><g fill-rule="evenodd"><path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"></path><g fill="#fff"><path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"></path><path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"></path></g></g><path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"></path><path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"></path></svg>
               </span>
-              Finder
+              Gudnet ManPower Services
             </a>
           </header>
 
@@ -237,37 +237,16 @@
             <button type="submit" class="btn btn-lg btn-primary w-100">Sign In</button>
           </form>
 
-          <!-- Divider -->
-          <div class="d-flex align-items-center my-4">
-            <hr class="w-100 m-0">
-            <span class="text-body-emphasis fw-medium text-nowrap mx-4">or continue with</span>
-            <hr class="w-100 m-0">
-          </div>
 
-          <!-- Social login -->
-          <div class="d-flex flex-column flex-sm-row gap-3 pb-4 mb-3 mb-lg-4">
-            <button type="button" class="btn btn-lg btn-outline-secondary w-100 px-2">
-              <i class="fi-google ms-1 me-1"></i>
-              Google
-            </button>
-            <button type="button" class="btn btn-lg btn-outline-secondary w-100 px-2">
-              <i class="fi-facebook ms-1 me-1"></i>
-              Facebook
-            </button>
-            <button type="button" class="btn btn-lg btn-outline-secondary w-100 px-2">
-              <i class="fi-apple ms-1 me-1"></i>
-              Apple
-            </button>
-          </div>
 
           <!-- Footer -->
           <footer class="mt-auto">
-            <div class="nav mb-4">
+            <!-- <div class="nav mb-4">
               <a class="nav-link text-decoration-underline p-0" href="help-topics-v1.html">Need help?</a>
             </div>
             <p class="fs-xs mb-0">
               © All rights reserved. Made by <a class="hover-effect-underline text-dark-emphasis text-decoration-none" href="https://createx.studio/" target="_blank" rel="noreferrer">Createx Studio</a>
-            </p>
+            </p> -->
           </footer>
         </div>
 
@@ -286,9 +265,7 @@
 
     <!-- Customizer toggle -->
     <div class="floating-buttons position-fixed top-50 end-0 z-sticky me-3 me-xl-4 pb-4">
-      <a class="btn btn-sm btn-outline-secondary text-uppercase bg-body rounded-pill shadow animate-rotate ms-2 me-n5" href="#customizer" style="font-size: .625rem; letter-spacing: .05rem;" data-bs-toggle="offcanvas" role="button" aria-controls="customizer">
-        Customize<i class="fi-settings fs-base ms-1 me-n2 animate-target"></i>
-      </a>
+     
     </div>
 
 

@@ -9,6 +9,7 @@ use App\Filament\Pages\AdminDashboard as FilamentPagesAdminDashboard;
 use App\Filament\Pages\UserDashboard as FilamentPagesUserDashboard;
 use App\Filament\Pages\CompanyDashboard as FilamentPagesCompanyDashboard;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\ProfileController;
 
 
 // Public routes
@@ -24,7 +25,7 @@ Route::get('/account-signin', [LoginController::class, 'showLoginForm'])->name('
 Route::post('/account-signin', [LoginController::class, 'login'])->name('login');
 
 Route::get('/account-profile', [UserProfile::class, 'showProfile'])->name('account-profile.user')->middleware('auth');
-Route::get('/account-settings', [UserProfile::class, 'accountSettings'])->name('account-settings.user')->middleware('auth');
+// Route::get('/account-settings', [UserProfile::class, 'accountSettings'])->name('account-settings.user')->middleware('auth');
 
 Route::get('/logout', [UserProfile::class, 'logout'])->name('logout')->middleware('auth');
 
@@ -47,6 +48,12 @@ Route::middleware(['auth'])->group(function () {
     Route::get('/filament/resources/users/{record}/edit', \App\Filament\Resources\UserResource\Pages\EditUser::class)
         ->name('filament.resources.users.edit');
 });
+
+Route::get('/profile/complete', [ProfileController::class, 'complete'])->name('profile.complete');
+Route::post('/profile/update', [ProfileController::class, 'update'])->name('profile.update');
+
+Route::get('account-settings', [ProfileController::class, 'edit'])->name('user.edit');
+Route::put('/user/{user}', [ProfileController::class, 'modify'])->name('user.modify');
 
 
 // Fallback route

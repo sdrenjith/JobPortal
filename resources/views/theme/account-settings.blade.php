@@ -1,664 +1,119 @@
-<!DOCTYPE html><html lang="en" data-bs-theme="light" data-pwa="true">
-<!-- Mirrored from finder-html.createx.studio/account-settings.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Jan 2025 11:31:16 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light" data-pwa="true">
 <head>
     <meta charset="utf-8">
-
-    <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
-
-    <!-- SEO Meta Tags -->
-    <title>Finder | Account - Settings</title>
+    <title>Finder | Account - Edit Profile</title>
     <meta name="description" content="Finder - Directory &amp; Listings Bootstrap HTML Template">
     <meta name="keywords" content="directory, listings, search, car dealer, real estate, city guide, business listings, medical directories, event listings, e-commerce, market, multipurpose, ui kit, light and dark mode, bootstrap, html5, css3, javascript, gallery, slider, mobile, pwa">
     <meta name="author" content="Createx Studio">
 
-    <!-- Webmanifest + Favicon / App icons -->
+    <style>
+      .navbar {
+        z-index: 3000 !important;
+      }
+    </style>
+
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <link rel="manifest" href="manifest.json">
     <link rel="icon" type="image/png" href="assets/app-icons/icon-32x32.png" sizes="32x32">
     <link rel="apple-touch-icon" href="assets/app-icons/icon-180x180.png">
-
-    <!-- Theme switcher (color modes) -->
     <script src="assets/js/theme-switcher.js"></script>
-
-    <!-- Preloaded local web font (Inter) -->
     <link rel="preload" href="assets/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin="">
-
-    <!-- Font icons -->
     <link rel="preload" href="assets/icons/finder-icons.woff2" as="font" type="font/woff2" crossorigin="">
     <link rel="stylesheet" href="assets/icons/finder-icons.min.css">
-
-    <!-- Vendor styles -->
-    <link rel="stylesheet" href="assets/vendor/choices.js/choices.min.css">
-    <link rel="stylesheet" href="assets/vendor/flatpickr/flatpickr.min.css">
-
-    <!-- Bootstrap + Theme styles -->
+    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
     <link rel="preload" href="assets/css/theme.min.css" as="style">
     <link rel="preload" href="assets/css/theme.rtl.min.css" as="style">
     <link rel="stylesheet" href="assets/css/theme.min.css" id="theme-styles">
-
-    <!-- Customizer -->
     <script src="assets/js/customizer.min.js"></script>
-  </head>
-
-
-  <!-- Body -->
-  <body>
-
-    <!-- Customizer offcanvas -->
-    <div class="offcanvas offcanvas-end" id="customizer" tabindex="-1">
-      <div class="offcanvas-header border-bottom">
-        <h4 class="h5 offcanvas-title">Customize theme</h4>
-        <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body">
-
-        <!-- Customizer settings -->
-        <div class="customizer-collapse collapse show" id="customizerSettings">
-
-          <!-- Colors -->
-          <div class="pb-4 mb-2">
-            <div class="d-flex align-items-center mb-3">
-              <i class="fi-swatches text-body-tertiary fs-5 me-2"></i>
-              <h5 class="fs-lg mb-0">Colors</h5>
-            </div>
-            <div class="row row-cols-2 g-3" id="theme-colors">
-              <div class="col">
-                <h6 class="fs-sm mb-2">Primary</h6>
-                <div class="color-swatch d-flex border rounded gap-3 p-2" id="theme-primary" data-color-labels="[&quot;theme-primary&quot;, &quot;primary&quot;, &quot;primary-rgb&quot;]">
-                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#d85151">
-                  <label for="primary" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #d85151"></label>
-                  <input type="color" class="visually-hidden" id="primary" value="#d85151">
-                </div>
-              </div>
-              <div class="col">
-                <h6 class="fs-sm mb-2">Success</h6>
-                <div class="color-swatch d-flex border rounded gap-3 p-2" id="theme-success" data-color-labels="[&quot;theme-success&quot;, &quot;success&quot;, &quot;success-rgb&quot;]">
-                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#33b36b">
-                  <label for="success" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #33b36b"></label>
-                  <input type="color" class="visually-hidden" id="success" value="#33b36b">
-                </div>
-              </div>
-              <div class="col">
-                <h6 class="fs-sm mb-2">Warning</h6>
-                <div class="color-swatch d-flex border rounded gap-3 p-2" id="theme-warning" data-color-labels="[&quot;theme-warning&quot;, &quot;warning&quot;, &quot;warning-rgb&quot;]">
-                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#fc9231">
-                  <label for="warning" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #fc9231"></label>
-                  <input type="color" class="visually-hidden" id="warning" value="#fc9231">
-                </div>
-              </div>
-              <div class="col">
-                <h6 class="fs-sm mb-2">Danger</h6>
-                <div class="color-swatch d-flex border rounded gap-2 p-2" id="theme-danger" data-color-labels="[&quot;theme-danger&quot;, &quot;danger&quot;, &quot;danger-rgb&quot;]">
-                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#f03d3d">
-                  <label for="danger" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #f03d3d"></label>
-                  <input type="color" class="visually-hidden" id="danger" value="#f03d3d">
-                </div>
-              </div>
-              <div class="col">
-                <h6 class="fs-sm mb-2">Info</h6>
-                <div class="color-swatch d-flex border rounded gap-2 p-2" id="theme-info" data-color-labels="[&quot;theme-info&quot;, &quot;info&quot;, &quot;info-rgb&quot;]">
-                  <input type="text" class="form-control bg-transparent border-0 rounded-0 p-1" value="#3d7a81">
-                  <label for="info" class="ratio ratio-1x1 flex-shrink-0 w-100 cursor-pointer rounded-circle" style="max-width: 38px; background-color: #3d7a81"></label>
-                  <input type="color" class="visually-hidden" id="info" value="#3d7a81">
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Direction -->
-          <div class="pb-4 mb-2">
-            <div class="d-flex align-items-center pb-1 mb-2">
-              <i class="fi-sort text-body-tertiary fs-lg me-2" style="transform: rotate(90deg)"></i>
-              <h5 class="fs-lg mb-0">Direction</h5>
-            </div>
-            <div class="d-flex align-items-center justify-content-between border rounded p-3">
-              <div class="me-3">
-                <h6 class="mb-1">RTL</h6>
-                <p class="fs-sm mb-0">Change text direction</p>
-              </div>
-              <div class="form-check form-switch m-0">
-                <input type="checkbox" class="form-check-input" role="switch" id="rtl-switch">
-              </div>
-            </div>
-            <div class="alert alert-info p-2 mt-2 mb-0">
-              <div class="d-flex text-body-emphasis fs-xs py-1 pe-1">
-                <i class="fi-info text-info fs-lg mb-2 mb-sm-0" style="margin-top: .125rem"></i>
-                <div class="ps-2">To switch the text direction of your webpage from LTR to RTL, please consult the detailed instructions provided in the relevant section of our documentation.</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Border width -->
-          <div class="pb-4 mb-2">
-            <div class="d-flex align-items-center pb-1 mb-2">
-              <i class="fi-menu text-body-tertiary fs-lg me-2"></i>
-              <h5 class="fs-lg mb-0">Border width, px</h5>
-            </div>
-            <div class="slider-input d-flex align-items-center gap-3 border rounded p-3" id="border-input">
-              <input type="range" class="form-range" min="0" max="10" step="1" value="1">
-              <input type="number" class="form-control" id="border-width" min="0" max="10" value="1" style="max-width: 5.5rem">
-            </div>
-          </div>
-
-          <!-- Rounding -->
-          <div class="d-flex align-items-center pb-1 mb-2">
-            <i class="fi-maximize text-body-tertiary fs-lg me-2"></i>
-            <h5 class="fs-lg mb-0">Rounding, rem</h5>
-          </div>
-          <div class="slider-input d-flex align-items-center gap-3 border rounded p-3">
-            <input type="range" class="form-range" min="0" max="5" step=".05" value="0.5">
-            <input type="number" class="form-control" id="border-radius" min="0" max="5" step=".05" value="0.5" style="max-width: 5.5rem">
-          </div>
-        </div>
-
-        <!-- Customizer code -->
-        <div class="customizer-collapse collapse" id="customizerCode">
-          <div class="nav mb-3">
-            <a class="nav-link position-relative fs-base p-0" href=".html" data-bs-toggle="collapse" aria-expanded="true" aria-controls="customizerSettings customizerCode">
-              <i class="fi-chevron-left fs-lg ms-n1 me-1"></i>
-              <span class="hover-effect-underline stretched-link">Back to settings</span>
-            </a>
-          </div>
-          <p class="fs-sm pb-1">To apply the provided styles to your webpage, enclose them within a <code>&lt;style&gt;</code> tag and insert this tag into the <code>&lt;head&gt;</code> section of your HTML document after the following link to the main stylesheet:<br><code>&lt;link href="assets/css/theme.min.css"&gt;</code></p>
-          <div class="position-relative bg-body-tertiary rounded overflow-hidden pt-3">
-            <div class="position-absolute top-0 start-0 w-100 p-3">
-              <button type="button" class="btn btn-sm btn-outline-dark w-100" data-copy-text-from="#generated-styles" data-done-label="Code copied">
-                <i class="fi-copy fs-sm me-1"></i>
-                Copy code
-              </button>
-            </div>
-            <pre class="text-wrap bg-transparent border-0 fs-xs text-body-emphasis p-4 pt-5" id="generated-styles"></pre>
-          </div>
-        </div>
-      </div>
-
-      <!-- Offcanvas footer (Action buttons) -->
-      <div class="offcanvas-header border-top gap-3 d-none" id="customizer-btns">
-        <button type="button" class="btn btn-lg btn-secondary w-100 fs-sm" id="customizer-reset">
-          <i class="fi-trash fs-lg me-2 ms-n1"></i>
-          Reset
-        </button>
-        <button class="btn btn-lg btn-primary hiding-collapse-toggle w-100 fs-sm collapsed" type="button" data-bs-toggle="collapse" data-bs-target=".customizer-collapse" aria-expanded="false" aria-controls="customizerSettings customizerCode">
-          <i class="fi-code fs-lg me-2 ms-n1"></i>
-          Show code
-        </button>
-      </div>
-    </div>
-
-
-    <!-- Navigation bar (Page header) -->
-    <header class="navbar navbar-expand-lg bg-body navbar-sticky sticky-top z-fixed px-0" data-sticky-element="">
+</head>
+<body>
+    <header class="navbar navbar-expand-lg bg-body navbar-sticky sticky-top z-3000 px-0" data-sticky-element="">
       <div class="container">
-
-        <!-- Mobile offcanvas menu toggler (Hamburger) -->
         <button type="button" class="navbar-toggler me-3 me-lg-0" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-
-        <!-- Navbar brand (Logo) -->
         <a class="navbar-brand py-1 py-md-2 py-xl-1 me-2 me-sm-n4 me-md-n5 me-lg-0" href="home-real-estate.html">
-          <span class="d-none d-sm-flex flex-shrink-0 text-primary rtl-flip me-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34"><path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"></path><g fill-rule="evenodd"><path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"></path><g fill="#fff"><path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"></path><path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"></path></g></g><path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"></path><path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"></path></svg>
+          <span class="d-none d-sm-flex flex-shrink-0 text rtl-flip me-2">
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34">
+              <path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"></path>
+              <g fill-rule="evenodd">
+                <path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"></path>
+                <g fill="#fff">
+                  <path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"></path>
+                  <path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"></path>
+                </g>
+              </g>
+              <path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"></path>
+              <path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"></path>
+            </svg>
           </span>
           Finder
         </a>
 
-        <!-- Main navigation that turns into offcanvas on screens < 992px wide (lg breakpoint) -->
         <nav class="offcanvas offcanvas-start" id="navbarNav" tabindex="-1" aria-labelledby="navbarNavLabel">
           <div class="offcanvas-header py-3">
             <h5 class="offcanvas-title" id="navbarNavLabel">Browse Finder</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
           </div>
-          <div class="offcanvas-body pt-2 pb-4 py-lg-0 mx-lg-auto">
-            <ul class="navbar-nav position-relative">
-              <li class="nav-item dropdown py-lg-2 me-lg-n1 me-xl-0">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Home</a>
-                <ul class="dropdown-menu">
-                  <li class="hover-effect-opacity px-2 mx-n2">
-                    <a class="dropdown-item d-block mb-0" href="home-real-estate.html">
-                      <span class="fw-medium">Real Estate</span>
-                      <span class="d-block fs-xs text-body-secondary">Property listings directory</span>
-                      <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
-                        <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/real-estate-light.jpg" alt="Real Estate Demo">
-                        <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/real-estate-dark.jpg" alt="Real Estate Demo">
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="hover-effect-opacity px-2 mx-n2">
-                    <a class="dropdown-item d-block mb-0" href="home-cars.html">
-                      <span class="fw-medium">Cars</span>
-                      <span class="d-block fs-xs text-body-secondary">Vehicle sales listings</span>
-                      <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
-                        <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/cars-light.jpg" alt="Cars Demo">
-                        <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/cars-dark.jpg" alt="Cars Demo">
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="hover-effect-opacity px-2 mx-n2">
-                    <a class="dropdown-item d-block mb-0" href="home-contractors.html">
-                      <span class="fw-medium">Contractors</span>
-                      <span class="d-block fs-xs text-body-secondary">Professional services directory</span>
-                      <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
-                        <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/contractors-light.jpg" alt="Contractors Demo">
-                        <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/contractors-dark.jpg" alt="Contractors Demo">
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="hover-effect-opacity px-2 mx-n2">
-                    <a class="dropdown-item d-block mb-0" href="home-doctors.html">
-                      <span class="fw-medium">Doctors</span>
-                      <span class="d-block fs-xs text-body-secondary">Medical professionals listings</span>
-                      <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
-                        <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/doctors-light.jpg" alt="Doctors Demo">
-                        <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/doctors-dark.jpg" alt="Doctors Demo">
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="hover-effect-opacity px-2 mx-n2">
-                    <a class="dropdown-item d-block mb-0" href="home-events.html">
-                      <span class="fw-medium">Events</span>
-                      <span class="d-block fs-xs text-body-secondary">Upcoming events listings</span>
-                      <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
-                        <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/events-light.jpg" alt="Events Demo">
-                        <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/events-dark.jpg" alt="Events Demo">
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
-                      </div>
-                    </a>
-                  </li>
-                  <li class="hover-effect-opacity px-2 mx-n2">
-                    <a class="dropdown-item d-block mb-0" href="home-city-guide.html">
-                      <span class="fw-medium">City Guide</span>
-                      <span class="d-block fs-xs text-body-secondary">Local places directory</span>
-                      <div class="d-none d-lg-block hover-effect-target position-absolute top-0 start-100 bg-body border border-light-subtle rounded rounded-start-0 transition-none invisible opacity-0 pt-2 px-2 ms-n2" style="width: 212px; height: calc(100% + 2px); margin-top: -1px">
-                        <img class="position-relative z-2 d-none-dark" src="assets/img/mega-menu/city-guide-light.jpg" alt="City Guide Demo">
-                        <img class="position-relative z-2 d-none d-block-dark" src="assets/img/mega-menu/city-guide-dark.jpg" alt="City Guide Demo">
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none-dark" style="box-shadow: .875rem .5rem 2rem -.5rem #676f7b; opacity: .1"></span>
-                        <span class="position-absolute top-0 start-0 w-100 h-100 rounded rounded-start-0 d-none d-block-dark" style="box-shadow: .875rem .5rem 1.875rem -.5rem #080b12; opacity: .25"></span>
-                      </div>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown position-static py-lg-2 me-lg-n1 me-xl-0">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Listings</a>
-                <div class="dropdown-menu rounded-4 p-4">
-                  <div class="d-flex flex-column flex-lg-row gap-4">
-                    <div style="min-width: 190px">
-                      <div class="h6 mb-2">Real Estate</div>
-                      <ul class="nav flex-column gap-2 mt-0">
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="listings-real-estate.html">Map/Listings Split View</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="single-entry-real-estate.html">Property Details Page</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="vendor-real-estate.html">Vendor Page</a>
-                        </li>
-                      </ul>
-                      <div class="h6 pt-4 mb-2">Cars</div>
-                      <ul class="nav flex-column gap-2 mt-0">
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="listings-grid-cars.html">Listings Grid View</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="listings-list-cars.html">Listings List View</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="single-entry-cars.html">Car Details Page</a>
-                        </li>
-                      </ul>
-                      <div class="h6 pt-4 mb-2">Contractors</div>
-                      <ul class="nav flex-column gap-2 mt-0">
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="listings-contractors.html">Listings with Side Filters</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="single-entry-contractors.html">Contractor Details Page</a>
-                        </li>
-                      </ul>
-                      <div class="h6 pt-4 mb-2">Doctors</div>
-                      <ul class="nav flex-column gap-2 mt-0">
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="listings-list-doctors.html">Listings List View</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="listings-grid-doctors.html">Listings Grid View</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="single-entry-doctors.html">Doctor Details Page</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div style="min-width: 190px">
-                      <div class="h6 mb-2">Events</div>
-                      <ul class="nav flex-column gap-2 mt-0">
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="listings-events.html">Listings with Top Filters</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="single-entry-events.html">Event Details Page</a>
-                        </li>
-                      </ul>
-                      <div class="h6 pt-4 mb-2">City Guide</div>
-                      <ul class="nav flex-column gap-2 mt-0">
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="listings-side-filters-city-guide.html">Listings with Side Filters</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="listings-top-filters-city-guide.html">Listings with Top Filters</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="single-entry-city-guide.html">Place Details Page</a>
-                        </li>
-                      </ul>
-                      <div class="h6 pt-4 mb-2">Add Property</div>
-                      <ul class="nav flex-column gap-2 mt-0">
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-property-type.html">Property type</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-property-location.html">Location</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-property-photos.html">Photos and Videos</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-property-details.html">Property Details</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-property-price.html">Price</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-property-contact-info.html">Contact Info</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-property-promotion.html">Ad Promotion</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div style="min-width: 190px">
-                      <div class="h6 mb-2">Add Contractor</div>
-                      <ul class="nav flex-column gap-2 mt-0">
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-contractor-location.html">Business Location</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-contractor-services.html">Choose Services</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-contractor-profile.html">Profile Details</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-contractor-price-hours.html">Price and Hours</a>
-                        </li>
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-contractor-project.html">Create First Project</a>
-                        </li>
-                      </ul>
-                      <div class="h6 pt-4 mb-2">Add (Sell) Car</div>
-                      <ul class="nav flex-column gap-2 mt-0">
-                        <li class="pt-1">
-                          <a class="nav-link hover-effect-underline d-inline fw-normal p-0" href="add-car.html">Add (Sell) Car Page</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="nav-item dropdown py-lg-2 me-lg-n1 me-xl-0">
-                <a class="nav-link dropdown-toggle active" aria-current="page" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" data-bs-auto-close="outside" aria-expanded="false">Account</a>
-                <ul class="dropdown-menu">
-                  <li class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Auth Pages</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="account-signin.html">Sign In</a></li>
-                      <li><a class="dropdown-item" href="account-signup.html">Sign Up</a></li>
-                      <li><a class="dropdown-item" href="account-password-recovery.html">Password Recovery</a></li>
-                    </ul>
-                  </li>
-                  <li><a class="dropdown-item" href="{{route('account-profile.user')}}">My Profile</a></li>
-
-                  <li><a class="dropdown-item" href="{{route('account-settings.user')}}">Account Settings</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown py-lg-2 me-lg-n1 me-xl-0">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" data-bs-auto-close="outside" aria-expanded="false">Pages</a>
-                <ul class="dropdown-menu">
-                  <li class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">About</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="about-v1.html">About v.1</a></li>
-                      <li><a class="dropdown-item" href="about-v2.html">About v.2</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Blog</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="blog-layout-v1.html">Blog Layout v.1</a></li>
-                      <li><a class="dropdown-item" href="blog-layout-v2.html">Blog Layout v.2</a></li>
-                      <li><a class="dropdown-item" href="blog-layout-v3.html">Blog Layout v.3</a></li>
-                      <li><a class="dropdown-item" href="blog-layout-v4.html">Blog Layout v.4</a></li>
-                      <li><a class="dropdown-item" href="blog-single-v1.html">Single Post v.1</a></li>
-                      <li><a class="dropdown-item" href="blog-single-v2.html">Single Post v.2</a></li>
-                      <li><a class="dropdown-item" href="blog-single-v3.html">Single Post v.3</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Contact</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="contact-v1.html">Contact v.1</a></li>
-                      <li><a class="dropdown-item" href="contact-v2.html">Contact v.2</a></li>
-                      <li><a class="dropdown-item" href="contact-v3.html">Contact v.3</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">Help Center</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="help-topics-v1.html">Help Topics v.1</a></li>
-                      <li><a class="dropdown-item" href="help-topics-v2.html">Help Topics v.2</a></li>
-                      <li><a class="dropdown-item" href="help-topics-v3.html">Help Topics v.3</a></li>
-                      <li><a class="dropdown-item" href="help-single-article-v1.html">Help Single Article v.1</a></li>
-                      <li><a class="dropdown-item" href="help-single-article-v2.html">Help Single Article v.2</a></li>
-                      <li><a class="dropdown-item" href="help-single-article-v3.html">Help Single Article v.3</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropend">
-                    <a class="dropdown-item dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" data-bs-trigger="hover" aria-expanded="false">404 Error</a>
-                    <ul class="dropdown-menu">
-                      <li><a class="dropdown-item" href="404-bg-image.html">Background Image (Real Estate)</a></li>
-                      <li><a class="dropdown-item" href="404-icon.html">Icon Image (Cars)</a></li>
-                      <li><a class="dropdown-item" href="404-split-screen.html">Split Screen (Contractors)</a></li>
-                      <li><a class="dropdown-item" href="404-illustration.html">Illustration (City Guide)</a></li>
-                    </ul>
-                  </li>
-                  <li><a class="dropdown-item" href="terms-and-conditions.html">Terms &amp; Conditions</a></li>
-                </ul>
-              </li>
-              <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
-                <a class="nav-link" href="docs/installation.html">Docs</a>
-              </li>
-              <li class="nav-item py-lg-2 me-lg-n2 me-xl-0">
-                <a class="nav-link" href="docs/typography.html">Components</a>
-              </li>
-            </ul>
-          </div>
+       
         </nav>
 
-        <!-- Button group -->
         <div class="d-flex gap-sm-1">
-
-          <!-- Theme switcher (light/dark/auto) -->
-          <div class="dropdown">
-            <button type="button" class="theme-switcher btn btn-icon btn-outline-secondary fs-lg border-0 animate-scale" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Toggle theme (light)">
-              <span class="theme-icon-active d-flex animate-target">
-                <i class="fi-sun"></i>
-              </span>
-            </button>
-            <ul class="dropdown-menu start-50 translate-middle-x" style="--fn-dropdown-min-width: 9rem; --fn-dropdown-spacer: .5rem">
-              <li>
-                <button type="button" class="dropdown-item active" data-bs-theme-value="light" aria-pressed="true">
-                  <span class="theme-icon d-flex fs-base me-2">
-                    <i class="fi-sun"></i>
-                  </span>
-                  <span class="theme-label">Light</span>
-                  <i class="item-active-indicator fi-check ms-auto"></i>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item" data-bs-theme-value="dark" aria-pressed="false">
-                  <span class="theme-icon d-flex fs-base me-2">
-                    <i class="fi-moon"></i>
-                  </span>
-                  <span class="theme-label">Dark</span>
-                  <i class="item-active-indicator fi-check ms-auto"></i>
-                </button>
-              </li>
-              <li>
-                <button type="button" class="dropdown-item" data-bs-theme-value="auto" aria-pressed="false">
-                  <span class="theme-icon d-flex fs-base me-2">
-                    <i class="fi-auto"></i>
-                  </span>
-                  <span class="theme-label">Auto</span>
-                  <i class="item-active-indicator fi-check ms-auto"></i>
-                </button>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Account dropdown (Logged in state) -->
           <div class="dropdown pe-1 me-2">
             <a class="btn btn-icon hover-effect-scale position-relative bg-body-secondary border rounded-circle overflow-hidden" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="My account">
-              <img src="assets/img/account/avatar-sm.jpg" class="hover-effect-target position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="Avatar">
+              @if (auth()->user()->photo)
+                <img src="{{ Storage::url(auth()->user()->photo) }}" class="hover-effect-target position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="Avatar">
+              @else
+                <img src="assets/img/account/avatar-sm.jpg" class="hover-effect-target position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="Avatar">
+              @endif
             </a>
             <ul class="dropdown-menu dropdown-menu-end" style="--fn-dropdown-spacer: .5rem">
-              <li><span class="h6 dropdown-header">Michael Williams</span></li>
+              <li><span class="h6 dropdown-header">{{ auth()->user()->name }}</span></li>
               <li>
-                <a class="dropdown-item" href="account-profile.html">
+                <a class="dropdown-item" href="{{ route('account-profile.user') }}">
                   <i class="fi-user opacity-75 me-2"></i>
-                  My profile
+                  Edit profile
                 </a>
               </li>
-              <li>
-                <a class="dropdown-item" href="account-listings.html">
-                  <i class="fi-layers opacity-75 me-2"></i>
-                  My listings
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="account-reviews.html">
-                  <i class="fi-star opacity-75 me-2"></i>
-                  Reviews
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="account-favorites.html">
-                  <i class="fi-heart opacity-75 me-2"></i>
-                  Favorites
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="account-payment.html">
-                  <i class="fi-credit-card opacity-75 me-2"></i>
-                  Payment details
-                </a>
-              </li>
-              <li>
-                <a class="dropdown-item" href="account-settings.html">
-                  <i class="fi-settings opacity-75 me-2"></i>
-                  Account settings
-                </a>
-              </li>
+           
               <li><hr class="dropdown-divider"></li>
               <li>
-                <a class="dropdown-item" href="account-signin.html">
+                <a class="dropdown-item" href="{{ route('logout') }}">
                   <i class="fi-log-out opacity-75 me-2"></i>
                   Sign out
                 </a>
               </li>
             </ul>
           </div>
-
-          <!-- Add property button  -->
-          <a class="btn btn-primary animate-scale" href="add-property-type.html">
-            <i class="fi-plus fs-lg animate-target ms-n2 me-1 me-sm-2"></i>
-            Add<span class="d-none d-xl-inline ms-1">property</span>
-          </a>
         </div>
       </div>
     </header>
 
-
-    <!-- Page content -->
     <main class="content-wrapper">
       <div class="container pt-4 pt-sm-5 pb-5 mb-xxl-3">
         <div class="row pt-2 pt-sm-0 pt-lg-2 pb-2 pb-sm-3 pb-md-4 pb-lg-5">
-
-
-          <!-- Sidebar navigation that turns into offcanvas on screens < 992px wide (lg breakpoint) -->
           <aside class="col-lg-3" style="margin-top: -105px">
             <div class="offcanvas-lg offcanvas-start sticky-lg-top pe-lg-3 pe-xl-4" id="accountSidebar">
               <div class="d-none d-lg-block" style="height: 105px"></div>
-
-              <!-- Header -->
               <div class="offcanvas-header d-lg-block py-3 p-lg-0">
-                <div class="d-flex flex-row flex-lg-column align-items-center align-items-lg-start">
-                  <div class="flex-shrink-0 bg-body-secondary border rounded-circle overflow-hidden" style="width: 64px; height: 64px">
-                    <img src="assets/img/account/avatar.jpg" alt="Avatar">
-                  </div>
-                  <div class="pt-lg-3 ps-3 ps-lg-0">
-                    <h6 class="mb-1">Michael Williams</h6>
-                    <p class="fs-sm mb-0">m.williams@example.com</p>
-                  </div>
+                <div class="d-flex flex-row flex-lg-column align-items-center align-items-md-start">
+                  
+                  
                 </div>
                 <button type="button" class="btn-close d-lg-none" data-bs-dismiss="offcanvas" data-bs-target="#accountSidebar" aria-label="Close"></button>
               </div>
-
-              <!-- Body (Navigation) -->
               <div class="offcanvas-body d-block pt-2 pt-lg-4 pb-lg-0">
                 <nav class="list-group list-group-borderless">
-                  <a class="list-group-item list-group-item-action d-flex align-items-center" href="account-profile.html">
+                  <a class="list-group-item list-group-item-action d-flex align-items-center " aria-current="page" href="{{ route('account-profile.user') }}">
                     <i class="fi-user fs-base opacity-75 me-2"></i>
                     My profile
                   </a>
-                  <a class="list-group-item list-group-item-action d-flex align-items-center" href="account-listings.html">
-                    <i class="fi-layers fs-base opacity-75 me-2"></i>
-                    My listings
-                  </a>
-                  <a class="list-group-item list-group-item-action d-flex align-items-center" href="account-reviews.html">
-                    <i class="fi-star fs-base opacity-75 me-2"></i>
-                    Reviews
-                  </a>
-                  <a class="list-group-item list-group-item-action d-flex align-items-center" href="account-favorites.html">
-                    <i class="fi-heart fs-base opacity-75 me-2"></i>
-                    Favorites
-                  </a>
-                  <a class="list-group-item list-group-item-action d-flex align-items-center" href="account-payment.html">
-                    <i class="fi-credit-card fs-base opacity-75 me-2"></i>
-                    Payment details
-                  </a>
-                  <a class="list-group-item list-group-item-action d-flex align-items-center active" aria-current="page" href="account-settings.html">
+                  <a class="list-group-item list-group-item-action d-flex align-items-center active" href="{{ route('user.edit') }}">
                     <i class="fi-settings fs-base opacity-75 me-2"></i>
-                    Account settings
-                  </a>
-                  <a class="list-group-item list-group-item-action d-flex align-items-center" href="help-topics-v1.html">
-                    <i class="fi-help-circle fs-base opacity-75 me-2"></i>
-                    Help center
-                  </a>
-                </nav>
-                <nav class="list-group list-group-borderless pt-3">
-                  <a class="list-group-item list-group-item-action d-flex align-items-center" href="account-signin.html">
+Edit profile                  </a>
+                  <a class="list-group-item list-group-item-action d-flex align-items-center" href="{{ route('logout') }}">
                     <i class="fi-log-out fs-base opacity-75 me-2"></i>
                     Sign out
                   </a>
@@ -667,370 +122,94 @@
             </div>
           </aside>
 
-
-          <!-- Account settings content -->
           <div class="col-lg-9">
-            <h1 class="h2 pb-2 pb-lg-3">Account settings</h1>
-
-            <!-- Nav pills -->
-            <div class="nav overflow-x-auto mb-3">
-              <ul class="nav nav-pills flex-nowrap gap-2 pb-2 mb-1" role="tablist">
-                <li class="nav-item me-1" role="presentation">
-                  <button type="button" class="nav-link text-nowrap active" id="personal-info-tab" data-bs-toggle="pill" data-bs-target="#personal-info" role="tab" aria-controls="personal-info" aria-selected="true">
-                    Personal info
-                  </button>
-                </li>
-                <li class="nav-item me-1" role="presentation">
-                  <button class="nav-link text-nowrap" id="security-tab" data-bs-toggle="pill" data-bs-target="#security" type="button" role="tab" aria-controls="security" aria-selected="false">
-                    Password and security
-                  </button>
-                </li>
-                <li class="nav-item" role="presentation">
-                  <button class="nav-link text-nowrap" id="notifications-tab" data-bs-toggle="pill" data-bs-target="#notifications" type="button" role="tab" aria-controls="notifications" aria-selected="false">
-                    Notification settings
-                  </button>
-                </li>
-              </ul>
-            </div>
-
-            <div class="tab-content">
-
-              <!-- Personal info tab -->
-              <div class="tab-pane fade show active" id="personal-info" role="tabpanel" aria-labelledby="personal-info-tab">
-                <div class="vstack gap-4">
-
-                  <!-- Profile completeness info card -->
-                  <div class="card bg-warning-subtle border-0 mb-2">
-                    <div class="card-body d-flex align-items-center">
-                      <div class="circular-progress text-warning flex-shrink-0 ms-n2 ms-sm-0" role="progressbar" style="--fn-progress: 65" aria-label="Warning progress" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
-                        <svg class="progress-circle">
-                          <circle class="progress-background d-none-dark" r="0" style="stroke: #fff"></circle>
-                          <circle class="progress-background d-none d-block-dark" r="0" style="stroke: rgba(255,255,255, .1)"></circle>
-                          <circle class="progress-bar" r="0"></circle>
-                        </svg>
-                        <h5 class="position-absolute top-50 start-50 translate-middle text-center mb-0">65%</h5>
-                      </div>
-                      <div class="ps-3 ps-sm-4">
-                        <h3 class="h6 pb-1 mb-2">Complete your profile</h3>
-                        <ul class="list-unstyled flex-row flex-wrap fs-sm mb-0">
-                          <li class="d-flex me-3">
-                            <i class="fi-plus fs-base me-2" style="margin-top: .1875rem"></i>
-                            Add the languages you speak
-                          </li>
-                          <li class="d-flex me-3">
-                            <i class="fi-plus fs-base me-2" style="margin-top: .1875rem"></i>
-                            Verify your email
-                          </li>
-                          <li class="d-flex">
-                            <i class="fi-plus fs-base me-2" style="margin-top: .1875rem"></i>
-                            Add date of birth
-                          </li>
-                        </ul>
-                      </div>
+            <h1 class="h2 pb-2 pt-130 pb-lg-3">Edit profile</h1>
+            <section class="row g-3 g-xl-4 pb-5 mb-md-3">
+              <div class="col-12" @if(!isset($missingFields) || $missingFields->isEmpty()) style="display: none;" @endif>
+                <div class="card bg-warning-subtle border-0 h-100">
+                  <div class="card-body d-flex align-items-center justify-content-between">
+                    <div>
+                      <h3 class="h6 pb-1 mb-2">Complete your profile</h3>
+                      <p class="mb-0">Click here to complete the rest of your details.</p>
                     </div>
+                    <a href="#" id="complete-profile" class="btn btn-warning">Complete Profile</a>
                   </div>
-
-                  <!-- Profile picture (Avatar) -->
-                  <div class="d-flex align-items-start align-items-sm-center mb-2">
-                    <div class="ratio ratio-1x1 hover-effect-opacity bg-body-tertiary border rounded-circle overflow-hidden" style="width: 124px">
-                      <img src="assets/img/account/avatar-lg.jpg" alt="Avatar">
-                      <div class="hover-effect-target position-absolute top-0 start-0 d-flex align-items-center justify-content-center w-100 h-100 opacity-0">
-                        <button type="button" class="btn btn-icon btn-sm btn-light position-relative z-2" aria-label="Remove">
-                          <i class="fi-trash fs-base"></i>
-                        </button>
-                        <span class="position-absolute top-0 start-0 w-100 h-100 bg-black bg-opacity-25 z-1"></span>
-                      </div>
+                </div>
+              </div>
+            </section>
+            <form action="{{ route('user.modify', auth()->user()) }}" method="POST" enctype="multipart/form-data">
+              @csrf
+              @method('PUT')
+              <div class="row g-3">
+                @foreach(auth()->user()->getFillable() as $field)
+                  @if($field !== 'password')
+                    <div class="col-sm-6">
+                      <label for="{{ $field }}" class="form-label text-capitalize">{{ str_replace('_', ' ', $field) }}</label>
+                      @if($field == 'photo')
+                        <input type="file" class="form-control" id="{{ $field }}" name="{{ $field }}">
+                        @if(auth()->user()->photo)
+                          <img src="{{ Storage::url(auth()->user()->photo) }}" alt="Profile Photo" class="rounded-circle mt-2" width="50">
+                        @else
+                          <p class="mt-2">No photo uploaded</p>
+                        @endif
+                      @elseif($field == 'resume_description')
+                        <textarea class="form-control" id="{{ $field }}" name="{{ $field }}" rows="3">{{ auth()->user()->$field }}</textarea>
+                      @else
+                        <input type="text" class="form-control" id="{{ $field }}" name="{{ $field }}" value="{{ is_array(auth()->user()->$field) ? implode(', ', auth()->user()->$field) : htmlspecialchars((string)(auth()->user()->$field ?? '')) }}">
+                      @endif
                     </div>
-                    <div class="ps-3 ps-sm-4">
-                      <p class="fs-sm" style="max-width: 440px">Your profile photo will appear on your profile and directory listing. PNG or JPG no bigger than 1000px wide and tall.</p>
-                      <button type="button" class="btn btn-sm btn-outline-secondary">
-                        <i class="fi-refresh-ccw fs-sm ms-n1 me-2"></i>
-                        Update photo
-                      </button>
-                    </div>
-                  </div>
+                  @endif
+                @endforeach
+              </div>
+              <button type="submit" class="btn btn-primary mt-3">Save changes</button>
+            </form>
 
-                  <!-- Settings form -->
-                  <form class="needs-validation" novalidate="">
-                    <div class="row row-cols-1 row-cols-sm-2 g-4 mb-4">
-                      <div class="col position-relative">
-                        <label for="fn" class="form-label fs-base">First name *</label>
-                        <input type="text" class="form-control form-control-lg" id="fn" value="Michael" required="">
-                        <div class="invalid-tooltip bg-transparent p-0">Enter your first name!</div>
-                      </div>
-                      <div class="col position-relative">
-                        <label for="ln" class="form-label fs-base">Last name *</label>
-                        <input type="text" class="form-control form-control-lg" id="ln" value="Williams" required="">
-                        <div class="invalid-tooltip bg-transparent p-0">Enter your last name!</div>
-                      </div>
-                      <div class="col position-relative">
-                        <label for="email" class="form-label d-flex align-items-center fs-base">Email address * <span class="badge text-danger bg-danger-subtle ms-2">Verify email</span></label>
-                        <input type="email" class="form-control form-control-lg" id="email" value="m.williams@example.com" required="">
-                        <div class="invalid-tooltip bg-transparent p-0">Enter a valid email address!</div>
-                      </div>
-                      <div class="col position-relative">
-                        <label for="phone" class="form-label d-flex align-items-center fs-base">Phone number * <span class="badge bg-success ms-2">Verified</span></label>
-                        <input type="tel" class="form-control form-control-lg" id="phone" data-input-format="{&quot;numericOnly&quot;: true, &quot;delimiters&quot;: [&quot;(&quot;, &quot;)&quot;, &quot; &quot;, &quot;-&quot;, &quot; &quot;], &quot;blocks&quot;: [0, 3, 0, 3, 4]}" value="(212) 555-7890" placeholder="(___) ___-____" required="">
-                        <div class="invalid-tooltip bg-transparent p-0">Enter a valid phone number!</div>
-                      </div>
-                      <div class="col">
-                        <label class="form-label fs-base">Languages you speak</label>
-                        <select class="form-select form-select-lg" data-select="" multiple="" aria-label="Languages select">
-                          <option value="">Select language</option>
-                          <option value="English">English</option>
-                          <option value="Spanish">Spanish</option>
-                          <option value="French">French</option>
-                          <option value="German">German</option>
-                          <option value="Italian">Italian</option>
-                        </select>
-                      </div>
-                      <div class="col">
-                        <label for="birth-date" class="form-label fs-base">Date of birth</label>
-                        <div class="position-relative">
-                          <input type="text" class="form-control form-control-lg form-icon-end" id="birth-date" data-datepicker="{&quot;dateFormat&quot;: &quot;F j, Y&quot;}" placeholder="Choose date">
-                          <i class="fi-calendar fs-lg position-absolute top-50 end-0 translate-middle-y me-3"></i>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+              $(document).ready(function() {
+                $('#complete-profile').click(function(e) {
+                  e.preventDefault();
+                  $.ajax({
+                    url: '{{ route("profile.complete") }}',
+                    type: 'GET',
+                    success: function(response) {
+                      $('body').append(`
+                        <div id="profile-modal" style="position: absolute; top: 14%; left: 33%; width: 51%; height: auto;min-height: 99%; background: #F0F0F0; z-index: 2000; padding: 20px; overflow-y: auto;">
+                          <button id="close-modal" style="position: absolute; top: 10px; right: 10px;">Close</button>
+                          ${response}
                         </div>
-                      </div>
-                    </div>
-                    <div class="position-relative mb-4">
-                      <label for="address" class="form-label fs-base">Address *</label>
-                      <input type="text" class="form-control form-control-lg" id="address" value="New York, Brooklyn" required="">
-                      <div class="invalid-tooltip bg-transparent p-0">Enter your address!</div>
-                    </div>
-                    <div class="pb-2 mb-4">
-                      <label for="user-info" class="form-label fs-base">Information about you</label>
-                      <textarea class="form-control form-control-lg bg-transparent" id="user-info" rows="6">Extensive experience in rentals and a vast database means I can quickly find the options that are right for you. Looking for a seamless and exciting rental experience? Contact me today - I promise it won't be boring! Your perfect home is just a call away.</textarea>
-                    </div>
-                    <div class="d-flex gap-3">
-                      <a class="btn btn-lg btn-secondary" href="account-profile.html">Cancel</a>
-                      <button type="submit" class="btn btn-lg btn-dark">Save changes</button>
-                    </div>
-                  </form>
-                </div>
-              </div>
+                      `);
+                    }
+                  });
+                });
 
+                $(document).on('submit', '#profile-form', function(e) {
+                  e.preventDefault();
+                  $.ajax({
+                    url: $(this).attr('action'),
+                    type: 'POST',
+                    data: $(this).serialize(),
+                    success: function(response) {
+                      alert(response.success);
+                      $('#profile-modal').remove();
+                    },
+                    error: function(response) {
+                      alert('An error occurred. Please try again.');
+                    }
+                  });
+                });
 
-              <!-- Password and security tab -->
-              <div class="tab-pane fade" id="security" role="tabpanel" aria-labelledby="security-tab">
-                <p class="mb-sm-4">Your current email address is <span class="fw-medium text-primary">m.williams@example.com</span></p>
-
-                <!-- Change password form -->
-                <form class="needs-validation" novalidate="">
-                  <div class="row row-cols-1 row-cols-sm-2 g-4 mb-4">
-                    <div class="col">
-                      <label for="current-password" class="form-label fs-base">Current password</label>
-                      <div class="password-toggle">
-                        <input type="password" class="form-control form-control-lg" id="current-password" required="">
-                        <div class="invalid-tooltip bg-transparent p-0">Incorrect password. Please try again.</div>
-                        <label class="password-toggle-button" aria-label="Show/hide password">
-                          <input type="checkbox" class="btn-check">
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row row-cols-1 row-cols-sm-2 g-4 mb-4">
-                    <div class="col">
-                      <label for="new-password" class="form-label fs-base">New password <span class="fs-sm fw-normal text-body-secondary">(Min 8 chars)</span></label>
-                      <div class="password-toggle">
-                        <input type="password" class="form-control form-control-lg" minlength="8" id="new-password" required="">
-                        <div class="invalid-tooltip bg-transparent p-0">Please ensure password is at least 8 characters long.</div>
-                        <label class="password-toggle-button" aria-label="Show/hide password">
-                          <input type="checkbox" class="btn-check">
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col">
-                      <label for="confirm-new-password" class="form-label fs-base">Confirm new password</label>
-                      <div class="password-toggle">
-                        <input type="password" class="form-control form-control-lg" minlength="8" id="confirm-new-password" required="">
-                        <div class="invalid-tooltip bg-transparent p-0">Passwords do not match.</div>
-                        <label class="password-toggle-button" aria-label="Show/hide password">
-                          <input type="checkbox" class="btn-check">
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="d-flex gap-3">
-                    <button type="reset" class="btn btn-lg btn-secondary">Cancel</button>
-                    <button type="submit" class="btn btn-lg btn-dark">Update password</button>
-                  </div>
-                </form>
-
-                <!-- Device history -->
-                <h3 class="h4 pt-5 mt-md-3 mb-sm-4">Device history</h3>
-                <div class="row g-3 g-xl-4 mb-3 mb-md-4">
-                  <div class="col-sm-6 col-md-4">
-                    <div class="card h-100">
-                      <div class="dropdown position-absolute top-0 end-0 mt-2 me-2">
-                        <button type="button" class="btn btn-icon btn-sm fs-xl text-dark-emphasis border-0" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Actions">
-                          <i class="fi-more-vertical"></i>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end" style="--fn-dropdown-min-width: 8rem">
-                          <li>
-                            <a class="dropdown-item" href="#!">
-                              <i class="fi-log-out opacity-75 me-2"></i>
-                              Sign out
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="card-body pb-2">
-                        <i class="fi-computer fs-3 text-body-tertiary pb-1 mb-2"></i>
-                        <h6 class="mb-0">Mac - New York, USA</h6>
-                      </div>
-                      <div class="card-footer d-flex align-items-center gap-2 bg-transparent border-0 pt-0 pb-4">
-                        <span class="fs-sm text-body-secondary">Chrome</span>
-                        <span class="badge text-success bg-success-subtle">Active now</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4">
-                    <div class="card h-100">
-                      <div class="dropdown position-absolute top-0 end-0 mt-2 me-2">
-                        <button type="button" class="btn btn-icon btn-sm fs-xl text-dark-emphasis border-0" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Actions">
-                          <i class="fi-more-vertical"></i>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-end" style="--fn-dropdown-min-width: 8rem">
-                          <li>
-                            <a class="dropdown-item" href="#!">
-                              <i class="fi-log-out opacity-75 me-2"></i>
-                              Sign out
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                      <div class="card-body pb-2">
-                        <i class="fi-smartphone fs-3 text-body-tertiary pb-1 mb-2"></i>
-                        <h6 class="mb-0">iPhone 15 - New York, USA</h6>
-                      </div>
-                      <div class="card-footer d-flex align-items-center gap-1 bg-transparent border-0 pt-0 pb-4">
-                        <span class="fs-sm text-body-secondary">Finder App</span>
-                        <i class="fi-bullet"></i>
-                        <span class="fs-sm text-body-secondary">20 hours ago</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="nav">
-                  <a class="nav-link position-relative px-0" href="#!">
-                    <i class="fi-log-out fs-base me-2"></i>
-                    <span class="hover-effect-underline stretched-link">Sign out of all sessions</span>
-                  </a>
-                </div>
-
-                <!-- Delete account -->
-                <h3 class="h4 pt-5 mt-n2 mt-md-0 mt-lg-2 mt-xl-3 mb-sm-4">Delete account</h3>
-                <p class="fs-sm mb-sm-4">When you delete your account, your public profile will be deactivated immediately. If you change your mind before the 14 days are up, sign in with your email and password, and we'll send a link to reactivate account.</p>
-                <div class="form-check mb-4">
-                  <input type="checkbox" class="form-check-input" id="confirm-deletion">
-                  <label for="confirm-deletion" class="form-check-label">Yes, I want to delete my account</label>
-                </div>
-                <button type="button" class="btn btn-lg btn-outline-danger">Delete account</button>
-              </div>
-
-
-              <!-- Notification settings tab -->
-              <div class="tab-pane fade" id="notifications" role="tabpanel" aria-labelledby="notifications-tab">
-
-                <!-- Item -->
-                <div class="d-sm-flex align-items-center justify-content-between border-bottom pb-4">
-                  <div class="me-4 mb-md-2">
-                    <h3 class="h6 mb-2">New rental alerts</h3>
-                    <p class="fs-sm pb-1 pb-sm-0 mb-sm-0">New rentals that match your <a class="text-body" href="account-favorites.html">Favorites</a></p>
-                  </div>
-                  <div class="d-flex gap-4 gap-xl-5 mb-md-2">
-                    <div class="form-check form-switch d-flex align-items-center ps-0 mb-0">
-                      <label for="email-1" class="form-check-label">Email</label>
-                      <input type="checkbox" class="form-check-input ms-2" role="switch" id="email-1" checked="">
-                    </div>
-                    <div class="form-check form-switch d-flex align-items-center ps-0 mb-0">
-                      <label for="phone-1" class="form-check-label mb-1">Phone</label>
-                      <input type="checkbox" class="form-check-input ms-2" role="switch" id="phone-1">
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Item -->
-                <div class="d-sm-flex align-items-center justify-content-between border-bottom py-4">
-                  <div class="me-4 my-md-2">
-                    <h3 class="h6 mb-2">Rental status updates</h3>
-                    <p class="fs-sm pb-1 pb-sm-0 mb-sm-0">Updates like price changes and off-market status on your <a class="text-body" href="account-favorites.html">Favorites</a></p>
-                  </div>
-                  <div class="d-flex gap-4 gap-xl-5 my-md-2">
-                    <div class="form-check form-switch d-flex align-items-center ps-0 mb-0">
-                      <label for="email-2" class="form-check-label">Email</label>
-                      <input type="checkbox" class="form-check-input ms-2" role="switch" id="email-2" checked="">
-                    </div>
-                    <div class="form-check form-switch d-flex align-items-center ps-0 mb-0">
-                      <label for="phone-2" class="form-check-label mb-1">Phone</label>
-                      <input type="checkbox" class="form-check-input ms-2" role="switch" id="phone-2">
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Item -->
-                <div class="d-sm-flex align-items-center justify-content-between border-bottom py-4">
-                  <div class="me-4 my-md-2">
-                    <h3 class="h6 mb-2">Finder recommendations</h3>
-                    <p class="fs-sm pb-1 pb-sm-0 mb-sm-0">Rentals we think you'll like. These recommendations may be slightly outside your search criteria</p>
-                  </div>
-                  <div class="d-flex gap-4 gap-xl-5 my-md-2">
-                    <div class="form-check form-switch d-flex align-items-center ps-0 mb-0">
-                      <label for="email-3" class="form-check-label">Email</label>
-                      <input type="checkbox" class="form-check-input ms-2" role="switch" id="email-3">
-                    </div>
-                    <div class="form-check form-switch d-flex align-items-center ps-0 mb-0">
-                      <label for="phone-3" class="form-check-label mb-1">Phone</label>
-                      <input type="checkbox" class="form-check-input ms-2" role="switch" id="phone-3">
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Item -->
-                <div class="d-sm-flex align-items-center justify-content-between border-bottom py-4">
-                  <div class="me-4 my-md-2">
-                    <h3 class="h6 mb-2">Featured news</h3>
-                    <p class="fs-sm pb-1 pb-sm-0 mb-sm-0">News and tips you may be interested in</p>
-                  </div>
-                  <div class="d-flex gap-4 gap-xl-5 my-md-2">
-                    <div class="form-check form-switch d-flex align-items-center ps-0 mb-0">
-                      <label for="email-4" class="form-check-label">Email</label>
-                      <input type="checkbox" class="form-check-input ms-2" role="switch" id="email-4">
-                    </div>
-                    <div class="form-check form-switch d-flex align-items-center ps-0 mb-0">
-                      <label for="phone-4" class="form-check-label mb-1">Phone</label>
-                      <input type="checkbox" class="form-check-input ms-2" role="switch" id="phone-4" checked="">
-                    </div>
-                  </div>
-                </div>
-
-                <!-- Item -->
-                <div class="d-sm-flex align-items-center justify-content-between border-bottom py-4">
-                  <div class="me-4 my-md-2">
-                    <h3 class="h6 mb-2">Finder extras</h3>
-                    <p class="fs-sm pb-1 pb-sm-0 mb-sm-0">Occasional notifications about new features to make finding the perfect rental easy</p>
-                  </div>
-                  <div class="d-flex gap-4 gap-xl-5 my-md-2">
-                    <div class="form-check form-switch d-flex align-items-center ps-0 mb-0">
-                      <label for="email-5" class="form-check-label">Email</label>
-                      <input type="checkbox" class="form-check-input ms-2" role="switch" id="email-5" checked="">
-                    </div>
-                    <div class="form-check form-switch d-flex align-items-center ps-0 mb-0">
-                      <label for="phone-5" class="form-check-label mb-1">Phone</label>
-                      <input type="checkbox" class="form-check-input ms-2" role="switch" id="phone-5" checked="">
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+                $(document).on('click', '#close-modal', function() {
+                  $('#profile-modal').remove();
+                });
+              });
+            </script>
           </div>
         </div>
       </div>
     </main>
-
-
-    <!-- Page footer -->
-    <footer class="footer bg-body border-top pt-5" data-bs-theme="dark">
+   <!-- Page footer -->
+   <footer class="footer bg-body border-top pt-5" data-bs-theme="dark">
       <div class="container pt-sm-2 pt-md-3 pt-lg-4 pb-4">
         <div class="accordion row pb-4 pb-md-3 pb-lg-4 mb-2 mb-sm-3 mb-md-2" id="footerLinks">
 
@@ -1159,47 +338,9 @@
 
         <!-- Copyright -->
         <div class="text-center pt-4 pb-md-2">
-          <p class="text-body-secondary fs-sm mb-0">© All rights reserved. Made by <a class="text-body fw-medium text-decoration-none hover-effect-underline" href="https://createx.studio/" target="_blank" rel="noreferrer">Createx Studio</a></p>
         </div>
       </div>
 
       <!-- Additional spacing to accommodate the sticky offcanvas toggle button -->
       <div class="d-lg-none" style="height: 3.75rem"></div>
     </footer>
-
-
-    <!-- Sidebar navigation offcanvas toggle that is visible on screens < 992px wide (lg breakpoint) -->
-    <button type="button" class="fixed-bottom z-sticky w-100 btn btn-lg btn-dark border-0 border-top border-light border-opacity-10 rounded-0 pb-4 d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#accountSidebar" aria-controls="accountSidebar" data-bs-theme="light">
-      <i class="fi-sidebar fs-base me-2"></i>
-      Account menu
-    </button>
-
-
-    <!-- Back to top button -->
-    <div class="floating-buttons position-fixed top-50 end-0 z-sticky me-3 me-xl-4 pb-4">
-      <a class="btn-scroll-top btn btn-sm bg-body border-0 rounded-pill shadow animate-slide-end" href="#top">
-        Top
-        <i class="fi-arrow-right fs-base ms-1 me-n1 animate-target"></i>
-        <span class="position-absolute top-0 start-0 w-100 h-100 border rounded-pill z-0"></span>
-        <svg class="position-absolute top-0 start-0 w-100 h-100 z-1" viewBox="0 0 62 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect x=".75" y=".75" width="60.5" height="30.5" rx="15.25" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10"></rect>
-        </svg>
-      </a>
-      <a class="btn btn-sm btn-outline-secondary text-uppercase bg-body rounded-pill shadow animate-rotate ms-2 me-n5" href="#customizer" style="font-size: .625rem; letter-spacing: .05rem;" data-bs-toggle="offcanvas" role="button" aria-controls="customizer">
-        Customize<i class="fi-settings fs-base ms-1 me-n2 animate-target"></i>
-      </a>
-    </div>
-
-
-    <!-- Vendor scripts -->
-    <script src="assets/vendor/cleave.js/cleave.min.js"></script>
-    <script src="assets/vendor/choices.js/choices.min.js"></script>
-    <script src="assets/vendor/flatpickr/flatpickr.min.js"></script>
-
-    <!-- Bootstrap + Theme scripts -->
-    <script src="assets/js/theme.min.js"></script>
-  
-
-</body>
-<!-- Mirrored from finder-html.createx.studio/account-settings.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 17 Jan 2025 11:31:16 GMT -->
-</html>
