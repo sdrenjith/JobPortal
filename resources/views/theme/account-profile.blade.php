@@ -227,7 +227,7 @@ Edit profile                  </a>
                 success: function(response) {
                     alert(response.success);
                     $('#profile-modal').remove();
-                    $('.table , .hdhide').show(); // Show the profile info section
+                    $('.table , .hdhide').show(); 
 
                 },
                 error: function(response) {
