@@ -74,7 +74,7 @@
                                     @for($i=18; $i<=50; $i++)
                                         <option value="{{ $i }}">{{ $i }}</option>
                                     @endfor
-                                </select>
+                                </select> 
                             </div>
                         </div>
                         <div class="col-md-6">
