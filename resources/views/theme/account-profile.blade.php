@@ -32,8 +32,8 @@
     <link rel="preload" href="assets/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin="">
 
     <!-- Font icons -->
-    <link rel="preload" href="assets/icons/gudnetmanpowerservices-icons.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="stylesheet" href="assets/icons/gudnetmanpowerservices-icons.min.css">
+    <link rel="preload" href="assets/icons/finder-icons.woff2" as="font" type="font/woff2" crossorigin="">
+    <link rel="stylesheet" href="assets/icons/finder-icons.min.css">
 
     <!-- Vendor styles -->
     <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
@@ -197,6 +197,7 @@ Edit profile                  </a>
 <script>
     $(document).ready(function() {
         // Step 2: Handle the "Complete Profile" button click
+        
         $('#complete-profile').click(function(e) {
           $('.table, .hdhide').hide();
           if ($('.table').is(':hidden')) {

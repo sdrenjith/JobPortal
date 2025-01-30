@@ -98,61 +98,32 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-12 d-none">
-            <input type="file" class="form-control" id="photo" name="photo" accept="image/*" required>
-        </div>
+        <div class="col-md-12">
+    <input type="file" class="form-control" id="photo" name="photo" accept="image/*" required 
+           style="position: absolute; opacity: 0; width: 1px; height: 1px;">
+</div>
+
     </div>
     <script>
         document.getElementById('photo').addEventListener('change', function(event) {
             const file = event.target.files[0];
             const preview = document.getElementById('photo-preview');
-
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    preview.src = e.target.result;
-                    preview.classList.remove('d-none');
-                }
-                reader.readAsDataURL(file);
-            } else {
-                preview.src = 'assets/img/account/avatar.jpg';
-                preview.classList.add('d-none');
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                preview.src = e.target.result;
+                preview.classList.remove('d-none');
             }
+            reader.readAsDataURL(file);
         });
-
 
         function removePhoto() {
             document.getElementById('photo-preview').src = 'assets/img/account/avatar.jpg';
             document.getElementById('photo-preview').classList.remove('d-none');
             document.getElementById('photo').value = '';
         }
-
-        document.getElementById('photo-preview').addEventListener('click', function() {
-            const image = new Image();
-            image.src = this.src;
-            const modal = document.createElement('div');
-            modal.classList.add('modal', 'fade');
-            modal.innerHTML = `
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <img src="${this.src}" class="img-fluid" />
-                        </div>
-                    </div>
-                </div>
-            `;
-            document.body.appendChild(modal);
-            const bsModal = new bootstrap.Modal(modal);
-            bsModal.show();
-            modal.addEventListener('hidden.bs.modal', function() {
-                modal.remove();
-            });
-        });
     </script>
 </div>
+
 
                 <!-- Page 1: Personal Information -->
                 <div class="form-page" data-page="1">
@@ -836,45 +807,46 @@
         });
 
         $('#submit-form').click((e) => {
-            e.preventDefault(); // Prevent default form submission
+    e.preventDefault(); // Prevent default form submission
 
-            if (validateCurrentPage()) {
-                // Submit the form via AJAX to handle JSON response
-                const form = $('form');
-                $.ajax({
-                    url: form.attr('action'),
-                    method: form.attr('method'),
-                    data: form.serialize(),
-                    success: (response) => {
-                        // Handle success response
-                        alert('Form submitted successfully!');
-                        setTimeout(() => {
-        window.location.reload(); // Reload the page
-    }, 2000); // Adjust the delay as needed
-                    },
-                    error: (xhr) => {
-                        try {
-                            // Parse the JSON error response
-                            const errorResponse = JSON.parse(xhr.responseText);
+    if (validateCurrentPage()) {
+        const form = $('#profile-form')[0]; // Get the form element
+        const formData = new FormData(form); // Create FormData object
 
-                            // Extract error messages and format them as a user-friendly list
-                            const errors = errorResponse.errors 
-                                ? Object.values(errorResponse.errors).flat() 
-                                : [errorResponse.message || 'An error occurred while submitting the form.'];
+        // Append the file manually (in case it's needed)
+        const photoFile = document.getElementById('photo').files[0];
+        if (photoFile) {
+            formData.append('photo', photoFile);
+        }
 
-                            // Convert the errors array to a user-friendly list
-                            const errorList = errors.map((error, index) => `${index + 1}. ${error}`).join('\n');
+        $.ajax({
+            url: form.action,
+            method: form.method,
+            data: formData,
+            processData: false,  // Important: Prevent jQuery from converting form data into a query string
+            contentType: false,  // Important: Set content type to false for file uploads
+            success: (response) => {
+                alert('Form submitted successfully!');
+                setTimeout(() => {
+                    window.location.reload(); // Reload the page
+                }, 2000);
+            },
+            error: (xhr) => {
+                try {
+                    const errorResponse = JSON.parse(xhr.responseText);
+                    const errors = errorResponse.errors 
+                        ? Object.values(errorResponse.errors).flat() 
+                        : [errorResponse.message || 'An error occurred while submitting the form.'];
 
-                            // Show the error messages in an alert box
-                            alert(`The following errors occurred:\n\n${errorList}`);
-                        } catch (err) {
-                            // Fallback for unexpected error format
-                            alert('An unexpected error occurred.');
-                        }
-                    }
-                });
+                    alert(`The following errors occurred:\n\n${errors.join('\n')}`);
+                } catch (err) {
+                    alert('An unexpected error occurred.');
+                }
             }
         });
+    }
+});
+
 
         // Initialize navigation
         updateNavigation();
@@ -890,7 +862,11 @@
     });
 });
 
+
+
+
 </script>
+
 
 
 

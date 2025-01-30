@@ -96,6 +96,9 @@ class ProfileController extends Controller
 
 public function update(Request $request)
 {
+
+    // dd($request->all(), $request->file('photo'));
+
     // Fetch the authenticated user's data
     $user = auth()->user();
 
@@ -107,9 +110,7 @@ public function update(Request $request)
                 case 'photo':
                     $validationRules[$field] = 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048';
                     break;
-                case 'resume':
-                    $validationRules[$field] = 'nullable|file|mimes:pdf,doc,docx|max:5120';
-                    break;
+                
                 case 'date_of_birth':
                 case 'start_date':
                     $validationRules[$field] = 'required|date';
@@ -177,8 +178,13 @@ public function update(Request $request)
     foreach ($data as $field => $value) {
         if ($field === 'photo' && $request->hasFile('photo')) {
             // Handle photo upload
-            $path = $request->file('photo')->store('photos', 'public');
-            $user->$field = $path;
+            if ($request->file('photo')->isValid()) {
+                if ($user->photo) {
+                    Storage::delete($user->photo); // Delete the old photo
+                }
+                $path = $request->file('photo')->store('photos', 'public');
+                $user->$field = $path;
+            }
         } else {
             $user->$field = $value;
         }
@@ -188,7 +194,7 @@ public function update(Request $request)
     $user->save();
 
     // Redirect to the complete profile page
-    return redirect()->route('profile.complete')->with('success', 'Profile updated successfully!');
+    // return redirect()->route('profile.complete')->with('success', 'Profile updated successfully!');
 }
         
 
