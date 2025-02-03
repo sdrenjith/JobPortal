@@ -16,11 +16,9 @@ class ProfileController extends Controller
     public function complete()
     {
         $pdfPages = [
-            // Page 1: Photo
-            [
-                'photo' => 'Choose Photo',
-            ],
-            // Page 2: Personal Information
+           
+            
+            // Page 1: Personal Information
             [
                 'age' => 'Age',
                 'gender' => 'Gender',
@@ -31,16 +29,16 @@ class ProfileController extends Controller
                 'current_country' => 'Current Country',
                 'religion' => 'Religion'
             ],
-            // Page 3: Basic Info
+            // Page 2: Basic Info
             [
                 'qualification_education' => 'Qualification',
                 'whatsapp' => 'WhatsApp Number',
                 'botim' => 'Botim Number',
                 'telegram' => 'Telegram Number',
                 'passport' => 'Passport',
-                'languages' => 'Language Skills'
+                
             ],
-            // Page 4: Professional Information
+            // Page 3: Professional Information
             [
                 'position' => 'Position',
                 'job_type' => 'Job Type',
@@ -48,14 +46,22 @@ class ProfileController extends Controller
                 'work_status' => 'Current Work Status',
                 'visa_type' => 'Visa Type'
             ],
-            // Page 5: Job Preferences Information
+            // Page 4: Job Preferences Information
             [
                 'preferred_location' => 'Preferred Job Location',
                 'expected_salary' => 'Expected Monthly Salary',
                 'accommodation_preference' => 'Accommodation Preference',
                 'day_off_preference' => 'Day Off Preference'
             ],
-            // Page 6: Skills Information
+            // Page 5: Skills Information
+            [
+                'languages' => 'Language Skills',
+                'english_level' => 'English Level',
+                'arabic_level' => 'Arabic Level',
+                'height' => 'Height',
+                'weight' => 'Weight',
+                'color' => 'color',
+            ],
             [
                 'main_skill' => 'Main Skilled',
                 'cooking_skills' => 'Cooking Skills',
@@ -83,6 +89,10 @@ class ProfileController extends Controller
                 'completed_cource' => 'Did you complete this course?',
                 'completion_year_of_cource' => 'What was the completion year of your course?',
                 'resume_description' => 'Resume Description (Explain your work experience and personality)'
+            ],
+             // Page 9: Photo
+            [
+                'photo' => 'Choose Photo',
             ],
         ];
     
