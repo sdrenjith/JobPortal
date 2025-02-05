@@ -7,6 +7,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Spatie\Permission\Traits\HasRoles;
 
+
     class User extends Authenticatable
     {
         use HasFactory, Notifiable, HasRoles;
@@ -26,7 +27,6 @@ use Spatie\Permission\Traits\HasRoles;
         'nationality',
         'current_country',
         'religion',
-        'qualification_education',
         'phone',
         'whatsapp',
         'botim',
@@ -47,7 +47,7 @@ use Spatie\Permission\Traits\HasRoles;
         'arabic_level',
         'height',
         'weight',
-        'colo   r',
+        'color',
         'main_skill',
         'cooking_skills',
         'other_skills',
@@ -89,5 +89,6 @@ use Spatie\Permission\Traits\HasRoles;
         'previous_job_position' => 'array',
         'previous_worked_country' => 'array',
         'job_in_employers_house' => 'array',
+        'preferred_location' => 'array',
     ];
 }

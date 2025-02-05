@@ -20,6 +20,8 @@ class ProfileController extends Controller
             
             // Page 1: Personal Information
             [
+                'first_name' => 'First Name',
+                'last_name' => 'Last Name',
                 'age' => 'Age',
                 'gender' => 'Gender',
                 'marital_status' => 'Marital Status',
@@ -31,7 +33,8 @@ class ProfileController extends Controller
             ],
             // Page 2: Basic Info
             [
-                'qualification_education' => 'Qualification',
+                'email' => 'Email',
+                'phone' => 'Phone Number',
                 'whatsapp' => 'WhatsApp Number',
                 'botim' => 'Botim Number',
                 'telegram' => 'Telegram Number',
@@ -156,6 +159,7 @@ public function update(Request $request)
                     break;
                 case 'language':
                 case 'main_skill':
+                case 'preferred_location':
                 case 'cooking_skills':
                 case 'other_skills':
                 case 'personality':

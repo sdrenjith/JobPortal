@@ -1,95 +1,74 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="light" data-pwa="true">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover">
-    <title>Finder | Account - Edit Profile</title>
-    <meta name="description" content="Finder - Directory &amp; Listings Bootstrap HTML Template">
-    <meta name="keywords" content="directory, listings, search, car dealer, real estate, city guide, business listings, medical directories, event listings, e-commerce, market, multipurpose, ui kit, light and dark mode, bootstrap, html5, css3, javascript, gallery, slider, mobile, pwa">
-    <meta name="author" content="Createx Studio">
+@include('head')
 
     <style>
-      .navbar {
+          .btn-group-toggle input[type="checkbox"],
+          .btn-group-toggle input[type="radio"] {
+        display: none;
+        
+    }
+
+    /* Style for the active state of the button */
+    .btn-group-toggle .btn.active {
+        background-color: #007bff; 
+        color: #fff; 
+    }
+    .btn-outline-primary.active {
+    background-color: #007bff; /* Change to your desired background color */
+    color: #fff; /* Change to your desired text color */
+    border-color: #007bff; /* Change to your desired border color */
+}
+.btn-outline-primary.active {
+    background-color: #007bff; /* Change to your desired background color */
+    color: #fff; /* Change to your desired text color */
+    border-color: #007bff; /* Change to your desired border color */
+}
+        .form-page {
+            display: none;
+        }
+        .form-page.active {
+            display: block;
+        }
+        .required::after {
+            content: " *";
+            color: red;
+        }
+
+        /* Double the height of input fields */
+        .form-control {
+            height: calc(1.1 * var(--bs-form-control-height, 3rem));
+            padding: 0.75rem 1rem;
+        }
+        .form-control.select {
+            height: calc(1.1 * var(--bs-form-control-height, 3rem));
+        }
+        textarea.form-control {
+            height: calc(2 * var(--bs-form-control-height, 4rem));
+            resize: vertical;
+        }
+        .skill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-check-input {
+    margin-right: 5px;
+}
+.navbar {
         z-index: 3000 !important;
       }
     </style>
 
-    <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <link rel="manifest" href="manifest.json">
-    <link rel="icon" type="image/png" href="assets/app-icons/icon-32x32.png" sizes="32x32">
-    <link rel="apple-touch-icon" href="assets/app-icons/icon-180x180.png">
-    <script src="assets/js/theme-switcher.js"></script>
-    <link rel="preload" href="assets/fonts/inter-variable-latin.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="preload" href="assets/icons/finder-icons.woff2" as="font" type="font/woff2" crossorigin="">
-    <link rel="stylesheet" href="assets/icons/finder-icons.min.css">
-    <link rel="stylesheet" href="assets/vendor/swiper/swiper-bundle.min.css">
-    <link rel="preload" href="assets/css/theme.min.css" as="style">
-    <link rel="preload" href="assets/css/theme.rtl.min.css" as="style">
-    <link rel="stylesheet" href="assets/css/theme.min.css" id="theme-styles">
-    <script src="assets/js/customizer.min.js"></script>
-</head>
+@include('head')
+
 <body>
-    <header class="navbar navbar-expand-lg bg-body navbar-sticky sticky-top z-3000 px-0" data-sticky-element="">
-      <div class="container">
-        <button type="button" class="navbar-toggler me-3 me-lg-0" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <a class="navbar-brand py-1 py-md-2 py-xl-1 me-2 me-sm-n4 me-md-n5 me-lg-0" href="home-real-estate.html">
-          <span class="d-none d-sm-flex flex-shrink-0 text rtl-flip me-2">
-            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34">
-              <path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"></path>
-              <g fill-rule="evenodd">
-                <path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"></path>
-                <g fill="#fff">
-                  <path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"></path>
-                  <path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"></path>
-                </g>
-              </g>
-              <path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"></path>
-              <path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"></path>
-            </svg>
-          </span>
-          Finder
-        </a>
+@include('header')
 
-        <nav class="offcanvas offcanvas-start" id="navbarNav" tabindex="-1" aria-labelledby="navbarNavLabel">
-          <div class="offcanvas-header py-3">
-            <h5 class="offcanvas-title" id="navbarNavLabel">Browse Finder</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-       
-        </nav>
-
-        <div class="d-flex gap-sm-1">
-          <div class="dropdown pe-1 me-2">
-            <a class="btn btn-icon hover-effect-scale position-relative bg-body-secondary border rounded-circle overflow-hidden" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="My account">
-              @if (auth()->user()->photo)
-                <img src="{{ Storage::url(auth()->user()->photo) }}" class="hover-effect-target position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="Avatar">
-              @else
-                <img src="assets/img/account/avatar-sm.jpg" class="hover-effect-target position-absolute top-0 start-0 w-100 h-100 object-fit-cover" alt="Avatar">
-              @endif
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end" style="--fn-dropdown-spacer: .5rem">
-              <li><span class="h6 dropdown-header">{{ auth()->user()->name }}</span></li>
-              <li>
-                <a class="dropdown-item" href="{{ route('account-profile.user') }}">
-                  <i class="fi-user opacity-75 me-2"></i>
-                  Edit profile
-                </a>
-              </li>
-           
-              <li><hr class="dropdown-divider"></li>
-              <li>
-                <a class="dropdown-item" href="{{ route('logout') }}">
-                  <i class="fi-log-out opacity-75 me-2"></i>
-                  Sign out
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </header>
 
     <main class="content-wrapper">
       <div class="container pt-4 pt-sm-5 pb-5 mb-xxl-3">
@@ -140,70 +119,853 @@ Edit profile                  </a>
             <form action="{{ route('user.modify', auth()->user()) }}" method="POST" enctype="multipart/form-data">
               @csrf
               @method('PUT')
-              <div class="row g-3">
-                @foreach(auth()->user()->getFillable() as $field)
-                  @if($field !== 'password')
-                    <div class="col-sm-6">
-                      <label for="{{ $field }}" class="form-label text-capitalize">{{ str_replace('_', ' ', $field) }}</label>
-                      @if($field == 'photo')
-                        <input type="file" class="form-control" id="{{ $field }}" name="{{ $field }}">
-                        @if(auth()->user()->photo)
-                          <img src="{{ Storage::url(auth()->user()->photo) }}" alt="Profile Photo" class="rounded-circle mt-2" width="50">
-                        @else
-                          <p class="mt-2">No photo uploaded</p>
-                        @endif
-                      @elseif($field == 'resume_description')
-                        <textarea class="form-control" id="{{ $field }}" name="{{ $field }}" rows="3">{{ auth()->user()->$field }}</textarea>
-                      @else
-                        <input type="text" class="form-control" id="{{ $field }}" name="{{ $field }}" value="{{ is_array(auth()->user()->$field) ? implode(', ', auth()->user()->$field) : htmlspecialchars((string)(auth()->user()->$field ?? '')) }}">
-                      @endif
-                    </div>
-                  @endif
-                @endforeach
-              </div>
-              <button type="submit" class="btn btn-primary mt-3">Save changes</button>
-            </form>
+              
+                <h2 class="mb-4">Personal Details</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label required">What is your Name ? / ما هو الاسم الخاص بك ?</label>
+                                <input type="text" class="form-control" name="first_name" value="{{ old('first_name', auth()->user()->first_name) }}" required>
+                            </div>  
 
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script>
-              $(document).ready(function() {
-                $('#complete-profile').click(function(e) {
-                  e.preventDefault();
-                  $.ajax({
-                    url: '{{ route("profile.complete") }}',
-                    type: 'GET',
-                    success: function(response) {
-                      $('body').append(`
-                        <div id="profile-modal" style="position: absolute; top: 14%; left: 33%; width: 51%; height: auto;min-height: 99%; background: #F0F0F0; z-index: 2000; padding: 20px; overflow-y: auto;">
-                          <button id="close-modal" style="position: absolute; top: 10px; right: 10px;">Close</button>
-                          ${response}
                         </div>
-                      `);
-                    }
-                  });
-                });
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label ">&nbsp;</label>
+                                <input type="text" class="form-control" name="last_name" value="{{ old('last_name', auth()->user()->last_name) }}"  required>
+                            </div>
+                        </div>
+                    </div>
+             
+           
 
-                $(document).on('submit', '#profile-form', function(e) {
-                  e.preventDefault();
-                  $.ajax({
-                    url: $(this).attr('action'),
-                    type: 'POST',
-                    data: $(this).serialize(),
-                    success: function(response) {
-                      alert(response.success);
-                      $('#profile-modal').remove();
-                    },
-                    error: function(response) {
-                      alert('An error occurred. Please try again.');
-                    }
-                  });
-                });
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label required">Select your Age / اختر عمرك</label>
+                                <select class="form-select" name="age" required>
+                                    @for($i=18; $i<=50; $i++)
+                                        <option value="{{ $i }}" {{ old('age', auth()->user()->age) == $i ? 'selected' : '' }}>{{ $i }}</option>
+                                    @endfor
+                                </select> 
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label required">Select your Gender / اختر جنسك</label>
+                                <div class="btn-group-toggle" data-toggle="buttons">
+                                    @foreach(['male', 'female', 'other'] as $gender)
+                                        <label class="btn btn-outline-primary mb-2 mr-2" for="gender_{{ $gender }}">
+                                            <input type="radio" name="gender" value="{{ $gender }}" id="gender_{{ $gender }}" autocomplete="off" {{ old('gender', auth()->user()->gender) == $gender ? 'checked' : '' }}>
+                                            {{ ucfirst($gender) }}
+                                        </label>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-                $(document).on('click', '#close-modal', function() {
-                  $('#profile-modal').remove();
-                });
-              });
-            </script>
+
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label required">Select Marital Status / اختر الحالة الاجتماعية</label>
+                                <div class="btn-group-toggle" data-toggle="buttons">
+                                    @foreach(['single', 'married', 'divorced', 'widowed', 'separated'] as $status)
+                                        <label class="btn btn-outline-primary mb-2 mr-2" for="marital_status_{{ $status }}">
+                                            <input type="radio" name="marital_status" value="{{ $status }}" id="marital_status_{{ $status }}" autocomplete="off" {{ old('marital_status', auth()->user()->marital_status) == $status ? 'checked' : '' }}>
+                                            {{ ucfirst($status) }}
+                                        </label>
+                                    @endforeach
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label required">What is your total work experience? / ما هي الخبرة العملية الكلية ?</label>
+                                <select name="work_experience" id="work_experience" class="form-control" required>
+                                    @for($i = 1; $i <= 15; $i++)
+                                        <option value="{{ $i }}" {{ old('work_experience', auth()->user()->work_experience) == $i ? 'selected' : '' }}>{{ $i }}</option>
+                                    @endfor
+                                    <option value="above" {{ old('work_experience', auth()->user()->work_experience) == 'above' ? 'selected' : '' }}>Above 15</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label required">How many children do you have? / كم عدد الاطفال?</label>
+                                <select name="children" id="children" class="form-control" required>
+                                    @for($i = 0; $i <= 5; $i++)
+                                        <option value="{{ $i }}" {{ old('children', auth()->user()->children) == $i ? 'selected' : '' }}>{{ $i }}</option>
+                                    @endfor
+                                    <option value="above" {{ old('children', auth()->user()->children) == 'above' ? 'selected' : '' }}>Above 5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label required">What is your Nationality? / ما هي الجنسية ?</label>
+                                <input type="text" class="form-control" id="nationality" name="nationality" placeholder="Nationality" value="{{ old('nationality', auth()->user()->nationality) }}" required>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label required">Where do you live now (current country)? / ما هي الدولة الحالية ?</label>
+                                <input type="text" class="form-control" id="current_country" name="current_country" placeholder="Current Country" value="{{ old('current_country', auth()->user()->current_country) }}" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label required">What is your Religion? / ما هي الدين الخاص بك ?</label>
+                            <div class="btn-group-toggle" data-toggle="buttons">
+                                @foreach(['Christian', 'Muslim', 'Hindu', 'Buddhism', 'Sikhism','Judaism'] as $religion)
+                                    <label class="btn btn-outline-primary mb-2 mr-2" for="religion_{{ $religion }}">
+                                        <input type="radio" name="religion" value="{{ $religion }}" id="religion_{{ $religion }}" autocomplete="off" {{ old('religion', auth()->user()->religion) == $religion ? 'checked' : '' }}>
+                                        {{ ucfirst($religion) }}
+                                    </label>
+                                @endforeach
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+
+                
+
+                <!-- Page 2: Basic Info -->
+                
+                
+                <h2 class="mb-4">Details About Yourself / تفاصيل عنك</h2>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label required">Email Id / البريد الالكتروني</label>
+                                <input type="email" class="form-control" id="email_id" name="email" placeholder="Email Id" value="{{ old('email', auth()->user()->email ?? '') }}" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label required">Phone Number / رقم الهاتف</label>
+                                <input type="number" class="form-control" id="phone_number" name="phone" placeholder="Phone Number" value="{{ old('phone', auth()->user()->phone ?? '') }}" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                       
+                        
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label required">WhatsApp Number / رقم الواتساب</label>
+                                <input type="text" class="form-control" id="whatsapp" name="whatsapp" placeholder="WhatsApp" value="{{ old('whatsapp', auth()->user()->whatsapp ?? '') }}" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label ">Botim Number / رقم البوتيم</label>
+                                <input type="text" class="form-control" id="botim" name="botim" placeholder="Botim" value="{{ old('botim', auth()->user()->botim ?? '') }}">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                      
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label ">Telegram Number / رقم التيلي</label>
+                                <input type="text" class="form-control" id="telegram" name="telegram" placeholder="Telegram" value="{{ old('telegram', auth()->user()->telegram ?? '') }}">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label required">Do you have a valid Passport? / هل لديك جواز سفر صالح?</label>
+                            <div class="btn-group-toggle" data-toggle="buttons">
+                                @foreach(['yes', 'applied', 'not yet'] as $passport)
+                                    <label class="btn btn-outline-primary mb-2 mr-2" for="passport_{{ $passport }}">
+                                        <input type="radio" name="passport" value="{{ $passport }}" id="passport_{{ $passport }}" autocomplete="off" {{ auth()->user()->passport === $passport ? 'checked' : '' }}>
+                                        {{ ucfirst(str_replace('_', ' ', $passport)) }}
+                                    </label>
+                                @endforeach
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+           
+
+    <!-- Page 3: Job Preferences -->
+    
+        <h2 class="mb-4">Professional Information / المعلومات الشخصية</h2>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="position" class="form-label required">For which position do you want to apply? / لماذا تريد التقديم؟</label>
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                        @foreach(['domestic_helper', 'company', 'other'] as $position)
+                            <label class="btn btn-outline-primary mb-2 mr-2" for="position_{{ $position }}">
+                                <input type="radio" name="position" value="{{ $position }}" id="position_{{ $position }}" autocomplete="off" required {{ old('position', auth()->user()->position ?? '') === $position ? 'checked' : '' }}>
+                                {{ ucfirst(str_replace('_', ' ', $position)) }}
+                            </label>
+                        @endforeach
+                    </div>
+                    </div>
+            </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="job_type" class="form-label required">Job Type / نوع الوظيفة</label>
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                        @foreach(['full_time', 'part_time', 'temporary', 'permanent', 'fresher', 'freelance'] as $job_type)
+                            <label class="btn btn-outline-primary mb-2 mr-2" for="job_type_{{ $job_type }}">
+                                <input type="radio" name="job_type" value="{{ $job_type }}" id="job_type_{{ $job_type }}" autocomplete="off" required {{ old('job_type', auth()->user()->job_type ?? '') === $job_type ? 'checked' : '' }}>
+                                {{ ucfirst(str_replace('_', ' ', $job_type)) }}
+                            </label>
+                        @endforeach
+                    </div>
+                    <p style="color:red; font-size:13px;">Follow labor laws. Part-time jobs are for permanent residents only.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="start_date" class="form-label required">When would you like to start your job? / ما ستبدأ الوظيفة؟?</label>
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                        <label class="btn btn-outline-primary mb-2 mr-2" for="immediate">
+                            <input type="radio" name="start_date" value="immediate" id="immediate" autocomplete="off" {{ old('start_date', auth()->user()->start_date ?? '') === 'immediate' ? 'checked' : '' }}>
+                            Immediate
+                        </label>
+                        <span class="mx-2 text-secondary">OR</span>
+                        <label class="btn  mb-2 mr-2" for="choose_date">
+                        <input type="date" class="form-control" id="start_date" name="start_date" 
+                        min="{{ \Carbon\Carbon::tomorrow()->toDateString() }}" 
+                        value="{{ old('start_date', auth()->user()->start_date ?? \Carbon\Carbon::now()->format('Y-m-d')) }}" required >
+                        </label>
+                    </div>
+                   
+                 
+            </div>
+            <p style="color:red; font-size:13px;">Next Available date is required</p>
+
+        </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="visa_type" class="form-label required">Which visa do you have? / ما هو الجواز الذي لديك؟?</label>
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                        @foreach(['family_visa', 'transfer_visa', 'husband_visa', 'visit_visa', 'employment_visa', 'no_visa', 'to_be_cancelled_visa', 'own_visa', 'cancelled_visa'] as $visa_type)
+                            <label class="btn btn-outline-primary mb-2 mr-2" for="visa_type_{{ $visa_type }}">
+                                <input type="radio" name="visa_type" value="{{ $visa_type }}" id="visa_type_{{ $visa_type }}" autocomplete="off" required {{ old('visa_type', auth()->user()->visa_type ?? '') === $visa_type ? 'checked' : '' }}>
+                                {{ ucfirst(str_replace('_', ' ', $visa_type)) }}
+                            </label>
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row">
+            
+
+            <div class="row">
+            <div class="mb-3">
+                <label class="form-label required">Current Work Status / حالة العمل</label>
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    @foreach([
+                        'finish_contract', 'terminated_relocation', 'terminated_other', 'break_contract', 
+                        'transfer', 'working_in_home_country', 'unemployed', 'ex_oversea'
+                    ] as $status)
+                        <label class="btn btn-outline-primary mb-2 mr-2" for="work_status_{{ $status }}">
+                            <input type="radio" name="work_status" value="{{ $status }}" id="work_status_{{ $status }}" autocomplete="off" required {{ old('work_status', auth()->user()->work_status ?? '') === $status ? 'checked' : '' }}>
+                            {{ ucfirst(str_replace('_', ' ', $status)) }}
+                        </label>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+        </div>
+                      
+        <h2 class="mb-4">Job Preferences Information / المعلومات الشخصية</h2>
+        
+        <div class="row">
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="preferred_location" class="form-label required">Preferred Job Location / المكان المفضل للوظيفة</label>
+                    <select name="preferred_location[]" id="preferred_location" class="form-select" multiple required>
+                        <option value="">Select Preferred Location</option>
+                        @foreach(countries() as $key => $country)
+                            <option value="{{ $key }}" {{ in_array($key, old('preferred_location', auth()->user()->preferred_location ?? [])) ? 'selected' : '' }}>
+                                {{ htmlspecialchars($country['name']) }}
+                            </option>
+                        @endforeach
+                    </select>
+            </div>
+            <select name="preferred_location[]" class="form-control">
+                <option value="">Select Preferred Location</option>
+                @if (old('preferred_location'))
+                    <option value="{{ old('preferred_location') }}" selected>{{ old('preferred_location') }}</option>
+                @endif
+                @foreach(countries() as $key => $country)
+                    <option value="{{ $key }}" {{ old('preferred_location', auth()->user()->preferred_location ?? '') == $key ? 'selected' : '' }}>
+                        {{ htmlspecialchars($country['flag']) }} {{ htmlspecialchars($country['name']) }}
+                    </option>
+                @endforeach
+            </select>
+        </div>
+            <div class="col-md-6">
+                <div class="mb-3">
+                    <label for="expected_salary" class="form-label required">Expected Monthly Salary / الراتب الشهري المتوقع</label>
+                    <div class="input-group">
+                        <select name="expected_salary_currency" id="expected_salary_currency" class="form-select" 
+                                style="width: auto; border-radius: 0.25rem 0 0 0.25rem;">
+                            <option value="USD" {{ old('expected_salary_currency', auth()->user()->expected_salary_currency ?? '') == 'USD' ? 'selected' : '' }}>USD</option>
+                            <option value="EUR" {{ old('expected_salary_currency', auth()->user()->expected_salary_currency ?? '') == 'EUR' ? 'selected' : '' }}>EUR</option>
+                            <option value="AED" {{ old('expected_salary_currency', auth()->user()->expected_salary_currency ?? '') == 'AED' ? 'selected' : '' }}>AED</option>
+                            <option value="INR" {{ old('expected_salary_currency', auth()->user()->expected_salary_currency ?? '') == 'INR' ? 'selected' : '' }}>INR</option>
+                        </select>
+                        <input type="number" class="form-control" id="expected_salary" name="expected_salary" required value="{{ old('expected_salary', auth()->user()->expected_salary ?? '') }}"
+                            style="border-radius: 0 0.25rem 0.25rem 0;">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="mb-3">
+                <label class="form-label required">Day Off Preference / الأيام المفضلة</label>
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    @foreach([
+                            'Weekly', 'Friday-Saturday', 'Saturday-Sunday', 'Flexible', 'I Don’t Want', 'To be Discussed'
+                        ] as $day_off_preference)
+                        <label class="btn btn-outline-primary mb-2 mr-2" for="day_off_{{ $day_off_preference }}">
+                            <input type="checkbox" name="day_off_preference[]" 
+                                value="{{ $day_off_preference }}" id="day_off_{{ $day_off_preference }}" autocomplete="off"
+                                {{ in_array($day_off_preference, old('day_off_preference', auth()->user()->day_off_preference ?? [])) ? 'checked' : '' }}>
+                            {{ $day_off_preference }}
+                        </label>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="mb-3">
+            <label class="form-label required">Accommodation Preference / المقام المفضل</label>
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    @foreach([
+                            'Live In', 'Live Out', 'Sharing Room', 'Separate Room', 'Flexible', 'To be Discussed'
+                        ] as $accommodation)
+                        <label class="btn btn-outline-primary mb-2 mr-2" for="accommodation_{{ $accommodation }}">
+                            <input type="checkbox" name="accommodation_preference[]" 
+                                value="{{ $accommodation }}" id="accommodation_{{ $accommodation }}" autocomplete="off"
+                                {{ in_array($accommodation, old('accommodation_preference', auth()->user()->accommodation_preference ?? [])) ? 'checked' : '' }}>
+                            {{ $accommodation }}
+                        </label>
+                    @endforeach
+                </div>
+            </div>
+            <p style="color:red; font-size:13px;">Accommodation preference is required</p>
+
+        </div>
+
+  
+                    <h2 class="mb-4">Skills / المهارات</h2>
+                    
+                    <div class="row">
+                    <div class="mb-3">
+                    <label class="form-label required">Language Skills / مهارات اللغات</label>
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                    @foreach([
+                        'English', 'Arabic', 'Nepali', 'Srilankan', 'Thai', 'Macanese', 'India', 'Japanese', 
+                        'Russian', 'Bangali', 'Cantonese', 'Vietnamese', 'Mandarin', 'Combodian', 'Iranian', 
+                        'Korean', 'Indonesia (Bahasa)', 'Filipino (Tagalog)', 'Other' 
+                    ] as $lang)
+                        <label class="btn btn-outline-primary mb-2 mr-2" for="lang_{{ $lang }}">
+                            <input type="checkbox" name="language[]" value="{{ $lang }}" id="lang_{{ $lang }}" autocomplete="off"
+                            {{ in_array($lang, old('language', auth()->user()->language ?? [])) ? 'checked' : '' }}>
+                            {{ $lang }}
+                        </label>
+                    @endforeach
+                </div>
+                </div>
+                </div>
+
+                <div class="row">
+                    <div class="mb-3">
+                    <label class="form-label required">English Language / مهارات اللغات</label>
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                    @foreach([
+                        'Fluent', 'Fair', 'Poor', 'Very Poor', 'Read', 'Write', 'No Read', 'No Write', 
+                       
+                    ] as $englang)
+                        <label class="btn btn-outline-primary mb-2 mr-2" for="englang_{{ $englang }}">
+                            <input type="radio" name="english_level" value="{{ $englang }}" id="englang_{{ $englang }}" autocomplete="off"
+                            {{ old('english_level', auth()->user()->english_level ?? '') == $englang ? 'checked' : '' }}>
+                            {{ $englang }}
+                        </label>
+                    @endforeach
+                </div>
+                </div>
+                </div>
+
+                <div class="row">
+                    <div class="mb-3">
+                    <label class="form-label required">Arabic Language / مهارات اللغات</label>
+                    <div class="btn-group-toggle" data-toggle="buttons">
+                    @foreach([
+                        'Fluent', 'Fair', 'Poor', 'Very Poor', 'Read', 'Write', 'No Read', 'No Write', 
+                    ] as $arablang)
+                        <label class="btn btn-outline-primary mb-2 mr-2" for="arablang_{{ $arablang }}">
+                            <input type="radio" name="arabic_level" value="{{ $arablang }}" id="arablang_{{ $arablang }}" autocomplete="off"
+                            {{ old('arabic_level', auth()->user()->arabic_level ?? '') == $arablang ? 'checked' : '' }}>
+                            {{ $arablang }}
+                        </label>
+                    @endforeach
+                </div>
+                </div>
+                </div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="mb-3">
+            <label for="height" class="form-label required">Height / الارتفاع</label>
+            <input type="number" class="form-control" id="height" name="height" placeholder="Enter height in cm" value="{{ old('height', auth()->user()->height ?? '') }}" required>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="mb-3">
+            <label for="weight" class="form-label required">Weight / الوزن</label>
+            <input type="number" class="form-control" id="weight" name="weight" placeholder="Enter weight in kg" value="{{ old('weight', auth()->user()->weight ?? '') }}" required>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+                    <div class="mb-3">
+                    <label class="form-label required">Color / اللون</label>
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    @foreach([
+                        'Very Fair', 'Fair', 'Medium', 'Dark',
+                    ] as $color)
+                        <label class="btn btn-outline-primary mb-2 mr-2" for="color_{{ $color }}">
+                            <input type="radio" name="color" value="{{ $color }}" id="color_{{ $color }}" autocomplete="off" required {{ old('color', auth()->user()->color ?? '') === $color ? 'checked' : '' }}>
+                            {{ ucfirst($color) }}
+                        </label>
+                    @endforeach
+                </div>
+                </div>
+                </div>
+
+                   
+                    <h2 class="mb-4">Skills / المهارات</h2>
+        <div class="row">
+            <div class="mb-3">
+                <label class="form-label required">Main Skills / المهارات الرئيسية</label>
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    @foreach([
+                        'Baby care', 'Child care', 'Teen care', 'Elderly care', 'Pets care', 'Tutoring', 'Housekeeping', 'Cooking', 'Marketing', 'Groceries'
+                    ] as $main_skill)
+                        <label class="btn btn-outline-primary mb-2 mr-2" for="skill_{{ str_replace(' ', '_', strtolower($main_skill)) }}">
+                            <input type="checkbox" name="main_skill[]" value="{{ $main_skill }}" id="skill_{{ str_replace(' ', '_', strtolower($main_skill)) }}" autocomplete="off"
+                            {{ in_array($main_skill, old('main_skill', auth()->user()->main_skills ?? [])) ? 'checked' : '' }}>
+                            {{ $main_skill }}
+                        </label>
+                    @endforeach
+                </div>
+              
+            </div>
+        </div>
+        <div class="row">
+            <div class="mb-3">
+                <label class="form-label required">Cooking Skills / المهارات الطبخ</label>
+               
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    @foreach([
+                        'Arabic', 'Indian', 'Italian', 'Japanese', 'Chinese', 'Thai', 'Singaporean', 'Vegetarian', 'Western', 'French', 'Mexican', 'Turkish', 'Moroccan', 'Brazilian', 'Lebanese', 'Spanish', 'Greek', 'American'
+                    ] as $cooking_skill)
+                        <label class="btn btn-outline-primary mb-2 mr-2" for="cooking_skill_{{ $cooking_skill }}">
+                            <input type="checkbox" name="cooking_skills[]" value="{{ $cooking_skill }}" id="cooking_skill_{{ $cooking_skill }}" autocomplete="off"
+                            {{ in_array($cooking_skill, old('cooking_skills', auth()->user()->cooking_skills ?? [])) ? 'checked' : '' }}>
+                            {{ $cooking_skill }}
+                        </label>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    <div class="row">
+        <div class="mb-3">
+            <label class="form-label required">Other Skills / المهارات الأخرى</label>
+            <div class="btn-group-toggle" data-toggle="buttons">
+                @foreach([
+                    'baking', 'caregiver', 'car_wash', 'computer', 'driving_license', 'first_aid', 'gardening', 'handyman', 'housework', 'sewing', 'swimming', 'cleaning', 'laundry'
+                ] as $other_skill)
+                    <label class="btn btn-outline-primary mb-2 mr-2" for="other_skill_{{ $other_skill }}">
+                        <input type="checkbox" name="other_skills[]" value="{{ $other_skill }}" id="other_skill_{{ $other_skill }}" autocomplete="off"
+                        {{ in_array($other_skill, old('other_skills', auth()->user()->other_skills ?? [])) ? 'checked' : '' }}>
+                        {{ $other_skill }}
+                    </label>
+                @endforeach
+            </div>
+        </div>
+    </div>
+        <div class="row">
+            <div class="mb-3">
+                <label class="form-label required">Personality / الشخصية</label>
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    @foreach([
+                        'Hard working', 'Good listener', 'Pet lover', 'Independent', 'Honest', 'Kids lover', 'Love cooking', 'Loyal', 'Patience', 'Trust worthy', 'Strong', 'Willing to Learn', 'Work without supervisor'
+                    ] as $personality)
+                        <label class="btn btn-outline-primary mb-2 mr-2" for="personality_{{ $personality }}">
+                            <input type="checkbox" name="personality[]" value="{{ $personality }}" id="personality_{{ $personality }}" autocomplete="off"
+                            {{ in_array($personality, old('personality', auth()->user()->personality ?? [])) ? 'checked' : '' }}>
+                            {{ $personality }}
+                        </label>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+                        
+    <h2 class="mb-4">Previous Experience / تجربة سابقة</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label for="job_start_year" class="form-label">Select work starting year / تحديد سنة بدء العمل</label>
+                <div class="d-flex">
+                    <input type="number" name="job_start_year" id="job_start_year" class="form-control me-2" required placeholder="e.g., 2020" value="{{ old('job_start_year', auth()->user()->job_start_year ?? '') }}">
+                    <select name="job_start_month" id="job_start_month" class="form-control" required>
+                        <option value="" {{ old('job_start_month', auth()->user()->job_start_month ?? '') == '' ? 'selected' : '' }}>Month</option>
+                        <option value="1" {{ old('job_start_month', auth()->user()->job_start_month ?? '') == '1' ? 'selected' : '' }}>January</option>
+                        <option value="2" {{ old('job_start_month', auth()->user()->job_start_month ?? '') == '2' ? 'selected' : '' }}>February</option>
+                        <option value="3" {{ old('job_start_month', auth()->user()->job_start_month ?? '') == '3' ? 'selected' : '' }}>March</option>
+                        <option value="4" {{ old('job_start_month', auth()->user()->job_start_month ?? '') == '4' ? 'selected' : '' }}>April</option>
+                        <option value="5" {{ old('job_start_month', auth()->user()->job_start_month ?? '') == '5' ? 'selected' : '' }}>May</option>
+                        <option value="6" {{ old('job_start_month', auth()->user()->job_start_month ?? '') == '6' ? 'selected' : '' }}>June</option>
+                        <option value="7" {{ old('job_start_month', auth()->user()->job_start_month ?? '') == '7' ? 'selected' : '' }}>July</option>
+                        <option value="8" {{ old('job_start_month', auth()->user()->job_start_month ?? '') == '8' ? 'selected' : '' }}>August</option>
+                        <option value="9" {{ old('job_start_month', auth()->user()->job_start_month ?? '') == '9' ? 'selected' : '' }}>September</option>
+                        <option value="10" {{ old('job_start_month', auth()->user()->job_start_month ?? '') == '10' ? 'selected' : '' }}>October</option>
+                        <option value="11" {{ old('job_start_month', auth()->user()->job_start_month ?? '') == '11' ? 'selected' : '' }}>November</option>
+                        <option value="12" {{ old('job_start_month', auth()->user()->job_start_month ?? '') == '12' ? 'selected' : '' }}>December</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+                    
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label for="job_end_year" class="form-label">Select contract finish year / تحديد سنة انتهاء العقد</label>
+                <div class="d-flex">
+                    <input type="number" name="job_end_year" id="job_end_year" class="form-control me-2" required placeholder="e.g., 2023"
+                           value="{{ old('job_end_year', auth()->user()->job_end_year ?? '') }}">
+                    <select name="job_end_month" id="job_end_month" class="form-control" required>
+                        <option value="">Month</option>
+                        <option value="1" {{ old('job_end_month', auth()->user()->job_end_month ?? '') == '1' ? 'selected' : '' }}>January</option>
+                        <option value="2" {{ old('job_end_month', auth()->user()->job_end_month ?? '') == '2' ? 'selected' : '' }}>February</option>
+                        <option value="3" {{ old('job_end_month', auth()->user()->job_end_month ?? '') == '3' ? 'selected' : '' }}>March</option>
+                        <option value="4" {{ old('job_end_month', auth()->user()->job_end_month ?? '') == '4' ? 'selected' : '' }}>April</option>
+                        <option value="5" {{ old('job_end_month', auth()->user()->job_end_month ?? '') == '5' ? 'selected' : '' }}>May</option>
+                        <option value="6" {{ old('job_end_month', auth()->user()->job_end_month ?? '') == '6' ? 'selected' : '' }}>June</option>
+                        <option value="7" {{ old('job_end_month', auth()->user()->job_end_month ?? '') == '7' ? 'selected' : '' }}>July</option>
+                        <option value="8" {{ old('job_end_month', auth()->user()->job_end_month ?? '') == '8' ? 'selected' : '' }}>August</option>
+                        <option value="9" {{ old('job_end_month', auth()->user()->job_end_month ?? '') == '9' ? 'selected' : '' }}>September</option>
+                        <option value="10" {{ old('job_end_month', auth()->user()->job_end_month ?? '') == '10' ? 'selected' : '' }}>October</option>
+                        <option value="11" {{ old('job_end_month', auth()->user()->job_end_month ?? '') == '11' ? 'selected' : '' }}>November</option>
+                        <option value="12" {{ old('job_end_month', auth()->user()->job_end_month ?? '') == '12' ? 'selected' : '' }}>December</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label for="previous_employer_type" class="form-label">What type of employer did you work for previously? / ما نوع الوظيفة السابقة?</label>
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    @foreach(['family', 'company', 'other'] as $employer_type)
+                        <label class="btn btn-outline-primary mb-2 mr-2" for="previous_employer_type_{{ $employer_type }}">
+                            <input type="radio" name="previous_employer_type" value="{{ $employer_type }}" id="previous_employer_type_{{ $employer_type }}" autocomplete="off" required
+                            {{ old('previous_employer_type', auth()->user()->previous_employer_type ?? '') == $employer_type ? 'checked' : '' }}>
+                            {{ ucfirst($employer_type) }}
+                        </label>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label for="previous_employer_nationality" class="form-label">What was your previous employer's nationality? / ما كان نوع الوظيفة السابقة؟ ?</label>
+                <input type="text" name="previous_employer_nationality" id="previous_employer_nationality" class="form-control" required placeholder="Type or select a nationality"
+                       value="{{ old('previous_employer_nationality', auth()->user()->previous_employer_nationality ?? '') }}">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label for="sponsor_house_people" class="form-label">How many people were in your sponsor's house? / كم عدد الأشخاص الذين كانوا في منزلك?</label>
+                <input type="number" name="sponsor_house_people" id="sponsor_house_people" class="form-control" value="{{ old('sponsor_house_people', auth()->user()->sponsor_house_people ?? '') }}" required>
+            </div>
+        </div>
+       
+   
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label for="reference_letter" class="form-label">Do you have a reference letter from your previous employer? / هل لديك رسالة من وظيفة سابقة?</label>
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    @foreach(['yes', 'no'] as $reference_letter)
+                        <label class="btn btn-outline-primary mb-2 mr-2" for="reference_letter_{{ $reference_letter }}">
+                            <input type="radio" name="reference_letter" value="{{ $reference_letter }}" id="reference_letter_{{ $reference_letter }}" autocomplete="off" required
+                            {{ old('reference_letter', auth()->user()->reference_letter ?? '') === $reference_letter ? 'checked' : '' }}>
+                            {{ ucfirst($reference_letter) }}
+                        </label>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="row">
+            <div class="mb-3">
+                <label class="form-label required">Previous Job Position / وظيفة سابقة</label>
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    @foreach([
+                            'cook', 'caregiver', 'driver', 'nurse', 'teacher', 'nany', 'babysitter', 'gardener', 
+                            'houseboy', 'domestic_helper', 'security_guard', 'cleaner', 'housekeeper', 'handy_boy', 
+                            'butler', 'laundry_worker', 'beautician', 'tailor', 'maid', 'hair_dresser', 'secretary', 
+                            'gym_trainer', 'swimming_trainer', 'elder_care' ] as $pos)
+                        <label class="btn btn-outline-primary mb-2 mr-2" for="pos_{{ $pos }}">
+                            <input type="checkbox" name="previous_job_position[]" 
+                                value="{{ $pos }}" id="pos_{{ $pos }}" autocomplete="off"
+                                {{ in_array($pos, old('previous_job_position', auth()->user()->previous_job_position ?? [])) ? 'checked' : '' }}>
+                            {{ ucfirst($pos) }}
+                        </label>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="mb-3">
+                <label class="form-label required">Select the country where you have worked before / اختر الدولة التي قمت بالعمل فيها</label>
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    @foreach([
+                            'Qatar', 'Dubai', 'Oman', 'Saudi', 'Kuwait', 'Bahrain', 'United Arab Emirates (UAE)',
+                            'Turkey', 'Malaysia', 'Taiwan', 'Singapore', 'South Korea', 'Hongkong', 'Russia', 
+                            'Jordan', 'Israel', 'Italy', 'Spain', 'France', 'Germany', 'United Kingdom', 
+                            'Ireland', 'Netherlands', 'Belgium', 'Austria', 'Cyprus', 'Other' ] as $country)
+                        <label class="btn btn-outline-primary mb-2 mr-2" for="country_{{ $country }}">
+                            <input type="checkbox" name="previous_worked_country[]" 
+                                value="{{ $country }}" id="country_{{ $country }}" autocomplete="off"
+                                {{ in_array($country, old('previous_worked_country', auth()->user()->previous_worked_country ?? [])) ? 'checked' : '' }}>
+                            {{ $country }}
+                        </label>
+                    @endforeach
+                </div>
+                <select name="previous_worked_country[]" class="form-control">
+                        <option value="">Select Country</option>
+                        @if (old('previous_worked_country'))
+                            <option value="{{ old('previous_worked_country') }}" selected>{{ old('previous_worked_country') }}</option>
+                        @endif
+                        @foreach(countries() as $key => $country)
+                            <option value="{{ $key }}" {{ old('previous_worked_country', auth()->user()->previous_worked_country ?? '') == $key ? 'selected' : '' }}>
+                                {{ htmlspecialchars($country['flag']) }} {{ htmlspecialchars($country['name']) }}
+                            </option>
+                        @endforeach
+                    </select>
+
+
+
+            </div>
+        </div>
+    <div class="row">
+        <div class="mb-3">
+            <label class="form-label required">What was your duties in your employer's house? / ما هي وظيفتك في منزلك ?</label>
+            <div class="btn-group-toggle" data-toggle="buttons">
+                @foreach([
+                        'cook', 'caregiver', 'driver', 'nurse', 'teacher', 'nany', 'babysitter', 'gardener', 
+                        'houseboy', 'domestic_helper', 'security_guard', 'cleaner', 'housekeeper', 'handy_boy', 
+                        'butler', 'laundry_worker', 'beautician', 'tailor', 'maid', 'hair_dresser', 'secretary', 
+                        'gym_trainer', 'swimming_trainer', 'elder_care' ] as $job)
+                    <label class="btn btn-outline-primary mb-2 mr-2" for="job_{{ $job }}">
+                        <input type="checkbox" name="job_in_employers_house[]" 
+                            value="{{ $job }}" id="job_{{ $job }}" autocomplete="off"
+                            {{ in_array($job, old('job_in_employers_house', auth()->user()->job_in_employers_house ?? [])) ? 'checked' : '' }}>
+                        {{ ucfirst($job) }}
+                    </label>
+                @endforeach
+            </div>
+        </div>
+    </div>
+
+
+   
+  
+    <h2 class="mb-4">Education / Qualification / التعليم / المؤهلات</h2>
+
+<div class="row">
+<div class="col-md-6">
+            <div class="mb-3">
+            <label for="education" class="form-label">What is your Education? / ما هي مستوى التعليم ?</label>
+        <div class="btn-group-toggle" data-toggle="buttons">
+            @foreach(['below_10th', 'high_school','11th','12th', 'bachelor', 'master', 'doctorate', 'university'] as $education_level)
+                <label class="btn btn-outline-primary mb-2 mr-2" for="education_{{ $education_level }}">
+                    <input type="radio" name="education" value="{{ $education_level }}" id="education_{{ $education_level }}" autocomplete="off" required
+                    {{ old('education', auth()->user()->education ?? '') == $education_level ? 'checked' : '' }}>
+                    {{ ucfirst(str_replace('_', ' ', $education_level)) }}
+                </label>
+            @endforeach
+        </div>
+            </div>
+        </div>
+
+                </div>
+
+                <div class="row">
+
+                <div class="col-md-6">
+                <div class="mb-3">
+    <label for="completed_cource" class="form-label">Did you complete this course? / هل قمت بالتعلم هذه الدورة ?</label>
+    <div class="btn-group-toggle" data-toggle="buttons">
+        @foreach(['yes', 'pending', 'no'] as $completed_cource)
+            <label class="btn btn-outline-primary mb-2 mr-2" for="completed_cource_{{ $completed_cource }}">
+                <input type="radio" name="completed_cource" value="{{ $completed_cource }}" id="completed_cource_{{ $completed_cource }}" autocomplete="off" required
+                    {{ old('completed_cource', auth()->user()->completed_cource ?? '') == $completed_cource ? 'checked' : '' }}>
+                {{ ucfirst($completed_cource) }}
+            </label>
+        @endforeach
+    </div>
+    </div>
+                </div>
+
+                <div class="col-md-6">
+                <div class="mb-3">
+    <label for="completion_year_of_cource" class="form-label">What was the completion year of your course? / ما هي سنة إنتهاء التعلم الخاص بك ?</label>
+    <input type="number" name="completion_year_of_cource" id="completion_year_of_cource" class="form-control me-2" placeholder="e.g., 2023" value="{{ old('completion_year_of_cource', auth()->user()->completion_year_of_cource ?? '') }}">
+
+    </div>
+</div></div>
+<div class="row">
+    <div class="mb-3">
+        <label class="form-label required">What is the duration of your course? / مدة التعلم ?</label>
+        <div class="btn-group-toggle" data-toggle="buttons">
+            @foreach([
+                '1 month', '2 months', '3 months', '4 months', '5 months', '6 months', 
+                '1 Year', '2 Years', '3 Years', '4 Years', '5 Years'
+            ] as $duration)
+                <label class="btn btn-outline-primary mb-2 mr-2" for="duration_{{ $duration }}">
+                    <input type="checkbox" name="duration_of_education[]" 
+                        value="{{ $duration }}" id="duration_{{ $duration }}" autocomplete="off"
+                        {{ in_array($duration, old('duration_of_education', auth()->user()->duration_of_education ?? [])) ? 'checked' : '' }}>
+                    {{ $duration }}
+                </label>
+            @endforeach
+        </div>
+    </div>
+</div>
+
+<div class="row">
+
+<h3 class="mb-4 mt-10">Resume Description (Explain your work experience and personality) / وصف السيرة الذاتية</h3>
+
+<div class="mb-3">
+<label for="resume_description" class="form-label">Resume Description (Explain your work experience and personality)</label>
+        <textarea class="form-control" id="resume_description" name="resume_description" placeholder="For Example: Good day ma'am and sir. I am Maricel, 35 years old, single with 3 kids, and Filipino. I have been working for a total of 9 years as a domestic helper. I worked in Singapore for 3 years, 2 years in Saudi Arabia, and 4 years here in Hong Kong. I recent served in an employers with 2 adults, 2 children, 1 elderly, and 3 pets. I have worked for them for 1 year and 2 months. I do all house chores including cooking, marketing, taking care of kids and pets, and housekeeping. My employer terminated our contract last January 10, 2025, and I am looking for a new employer. Thank you.">{{ old('resume_description', auth()->user()->resume_description ?? '') }}</textarea>
+    </div>
+
+</div>
+
+                </div>
+                <div class="form-page active" data-page="8">
+    <div class="row">
+        <h2 class="mb-6 justify-content-center"></h2>
+    </div>
+    <div class="row">
+        <div class="col-lg-12 d-flex justify-content-center">
+            <div style="width:100%;text-align:center">
+                <br><br>
+                <label class="form-label required" style="margin-bottom: 1.5rem;">Choose Photo</label>
+                <br>
+                <div class="position-relative">
+                    <img src="{{ auth()->user()->photo ? Storage::url(auth()->user()->photo) : 'assets/img/account/avatar.jpg' }}" id="photo-preview" class="img-thumbnail mt-2" style="max-width: 400px; height: 400px; object-fit: cover;" />
+
+                    
+                </div>
+                <br>
+                <div class="photo-options mt-3">
+                    <button type="button" class="btn btn-secondary" style="margin-top: 1.5rem;" onclick="document.getElementById('photo').click()">Upload Photo</button> &nbsp;
+                    <button type="button" class="btn btn-secondary" style="margin-top: 1.5rem;" onclick="removePhoto()">Remove Photo</button>
+                    <div style="display: flex; justify-content: center; align-items: center; margin-top: 1.5rem;">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="photo" id="profile_photo_yes" value="yes" checked>
+                            <label class="form-check-label" for="profile_photo_yes">Show Profile Photo</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="photo" id="profile_photo_no" value="no">
+                            <label class="form-check-label" for="profile_photo_no">Hide Profile Photo</label>
+                        </div>
+                    </div>
+                    <p id="visible-profile-photos" style="display: none; color: green;">Visible profile photos get more responses</p>
+                   
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12">
+    <input type="file" class="form-control" id="photo" name="photo" accept="image/*"
+           style="position: absolute; opacity: 0; width: 1px; height: 1px;">
+    <input type="hidden" name="photo" value="{{ auth()->user()->photo }}">
+</div>
+
+    </div>
+    <script>
+
+        document.getElementById('profile_photo_no').addEventListener('click', function() {
+                            document.getElementById('visible-profile-photos').style.display = 'block';
+                        });
+                        document.getElementById('profile_photo_yes').addEventListener('click', function() {
+                            document.getElementById('visible-profile-photos').style.display = 'none';
+                        });
+
+        document.getElementById('photo').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            const preview = document.getElementById('photo-preview');
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                preview.src = e.target.result;
+                preview.classList.remove('d-none');
+            }
+            reader.readAsDataURL(file);
+        });
+
+        function removePhoto() {
+            document.getElementById('photo-preview').src = 'assets/img/account/avatar.jpg';
+            document.getElementById('photo-preview').classList.remove('d-none');
+            document.getElementById('photo').value = '';
+        }
+    </script>
+</div>
+
+
+               
+          <hr>
+                          <div class="d-flex justify-content-center">
+              <button type="submit" class="btn btn-primary mt-2 px-5 py-3">Save changes</button>
+            </div>
+          </form>
+
+ 
           </div>
         </div>
       </div>
@@ -219,7 +981,9 @@ Edit profile                  </a>
               <span class="flex-shrink-0 text-primary rtl-flip me-2">
                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="34"><path d="M34.5 16.894v10.731c0 3.506-2.869 6.375-6.375 6.375H17.5h-.85C7.725 33.575.5 26.138.5 17c0-9.35 7.65-17 17-17s17 7.544 17 16.894z" fill="currentColor"></path><g fill-rule="evenodd"><path d="M17.5 13.258c-3.101 0-5.655 2.554-5.655 5.655s2.554 5.655 5.655 5.655 5.655-2.554 5.655-5.655-2.554-5.655-5.655-5.655zm-9.433 5.655c0-5.187 4.246-9.433 9.433-9.433s9.433 4.246 9.433 9.433a9.36 9.36 0 0 1-1.569 5.192l2.397 2.397a1.89 1.89 0 0 1 0 2.671 1.89 1.89 0 0 1-2.671 0l-2.397-2.397a9.36 9.36 0 0 1-5.192 1.569c-5.187 0-9.433-4.246-9.433-9.433z" fill="#000" fill-opacity=".05"></path><g fill="#fff"><path d="M17.394 10.153c-3.723 0-6.741 3.018-6.741 6.741s3.018 6.741 6.741 6.741 6.741-3.018 6.741-6.741-3.018-6.741-6.741-6.741zM7.347 16.894A10.05 10.05 0 0 1 17.394 6.847 10.05 10.05 0 0 1 27.44 16.894 10.05 10.05 0 0 1 17.394 26.94 10.05 10.05 0 0 1 7.347 16.894z"></path><path d="M23.025 22.525c.645-.645 1.692-.645 2.337 0l3.188 3.188c.645.645.645 1.692 0 2.337s-1.692.645-2.337 0l-3.187-3.187c-.645-.646-.645-1.692 0-2.337z"></path></g></g><path d="M23.662 14.663c2.112 0 3.825-1.713 3.825-3.825s-1.713-3.825-3.825-3.825-3.825 1.713-3.825 3.825 1.713 3.825 3.825 3.825z" fill="#fff"></path><path fill-rule="evenodd" d="M23.663 8.429a2.41 2.41 0 0 0-2.408 2.408 2.41 2.41 0 0 0 2.408 2.408 2.41 2.41 0 0 0 2.408-2.408 2.41 2.41 0 0 0-2.408-2.408zm-5.242 2.408c0-2.895 2.347-5.242 5.242-5.242s5.242 2.347 5.242 5.242-2.347 5.242-5.242 5.242-5.242-2.347-5.242-5.242z" fill="currentColor"></path></svg>
               </span>
-              <span class="fs-4 fw-semibold">Finder</span>
+              <span class="fs-4 fw-semibold">Gudnet ManPower Services
+
+</span>
             </a>
             <ul class="list-unstyled gap-3">
               <li>
@@ -315,8 +1079,12 @@ Edit profile                  </a>
         <div class="position-relative d-flex flex-column flex-md-row align-items-center overflow-hidden mb-md-2">
           <div class="position-relative d-xl-flex align-items-center w-100 z-2 text-center text-md-start py-4 py-md-5 px-4 px-sm-5 ps-md-5 pe-md-0 pe-lg-5 pe-xl-0 mt-md-4 ms-xxl-3 me-lg-5 me-xl-0">
             <div class="pt-3 pt-md-0 pt-xl-2 pe-xl-2 pe-xxl-0 me-xl-4 me-xxl-5">
-              <h3 class="mb-2">Download Finder App</h3>
-              <p class="text-body-secondary mb-xl-0">Find everything you need for buying, selling and renting property in our new Finder App!</p>
+              <h3 class="mb-2">Download Gudnet ManPower Services
+
+ App</h3>
+              <p class="text-body-secondary mb-xl-0">Find everything you need for buying, selling and renting property in our new Gudnet ManPower Services
+
+ App!</p>
             </div>
             <div class="d-flex flex-shrink-0 justify-content-center justify-content-md-start gap-3 pt-xl-3 pe-xl-3 me-xxl-5">
               <a class="btn btn-market btn-lg" href="#!" aria-label="Download on App Store">
@@ -330,7 +1098,9 @@ Edit profile                  </a>
             </div>
           </div>
           <div class="ratio rtl-flip position-relative z-2 align-self-md-end me-md-n4 me-lg-n5 me-xxl-0" style="--fn-aspect-ratio: calc(233 / 466 * 100%); max-width: 466px">
-            <img src="assets/img/app-footer.png" alt="Finder app">
+            <img src="assets/img/app-footer.png" alt="Gudnet ManPower Services
+
+ app">
           </div>
           <div class="bg-body-tertiary position-absolute bottom-0 start-0 w-100 rounded-4 d-none d-md-block" style="height: calc(100% - 32px)"></div>
           <div class="bg-body-tertiary position-absolute bottom-0 start-0 w-100 h-100 rounded-4 d-md-none"></div>
@@ -344,3 +1114,32 @@ Edit profile                  </a>
       <!-- Additional spacing to accommodate the sticky offcanvas toggle button -->
       <div class="d-lg-none" style="height: 3.75rem"></div>
     </footer>
+<script> 
+
+    document.querySelectorAll('.btn-group-toggle input[type="checkbox"]').forEach(function(input) {
+        if (input.checked) {
+            input.parentElement.classList.add('active');
+        }
+        input.addEventListener('change', function() {
+            if (this.checked) {
+                this.parentElement.classList.add('active');
+            } else {
+                this.parentElement.classList.remove('active');
+            }
+        });
+    });
+
+    document.querySelectorAll('.btn-group-toggle input[type="radio"][name]').forEach(function(input) {
+        const groupName = input.name;
+        const checkedRadio = document.querySelector(`.btn-group-toggle input[name="${groupName}"]:checked`);
+        if (checkedRadio) {
+            checkedRadio.parentElement.classList.add('active');
+        }
+        input.addEventListener('change', function() {
+            document.querySelectorAll(`.btn-group-toggle input[name="${groupName}"]`).forEach(function(radio) {
+                radio.parentElement.classList.remove('active');
+            });
+            this.parentElement.classList.add('active');
+        });
+    });
+    </script>
